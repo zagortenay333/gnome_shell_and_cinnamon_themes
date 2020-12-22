@@ -1,0 +1,68 @@
+/* ======================================
+ * ! Window list
+ * ====================================== */
+
+.window-list-box {
+    spacing: 3px;
+    font-weight: bold;
+
+    #appMenuIcon { padding: 0 0 0 4px; }
+
+    .window-list-item-box { padding: 0 2px; }
+
+    &.vertical {
+        #appMenuIcon { padding: 8px 0 0 0; }
+
+        .window-list-item-box { padding: 0; }
+    }
+}
+
+@each $pos in top, bottom, left, right {
+    .panel-#{$pos} {
+        .window-list-item-box {
+            color: $text-secondary-invert;
+
+            &:hover  {
+                border-image: url("img/panel/applet__#{$pos}__hover.svg") 4;
+                color: $text-primary-invert;
+            }
+
+            &:active, &:checked, &:focus  {
+                border-image: url("img/panel/window-list__#{$pos}__active.svg") 4;
+                color: $text-primary-invert;
+            }
+
+            &:hover:active, &:hover:checked, &:hover:focus  {
+                border-image: url("img/panel/window-list__#{$pos}__active__hover.svg") 4;
+                color: $text-primary-invert;
+            }
+        }
+
+        .window-list-item-demands-attention {
+            border-image: url("img/panel/DND__panel-#{$pos}__center.svg") 4;
+        }
+    }
+}
+
+/*
+ * The window list thumbnail shares a class
+ * with the alt-tab switcher, but it is
+ * the direct child of the top container.
+ *
+ * See also alt-tab module for a similar selector
+ */
+#uiGroup > .switcher-list {
+    border-image: url("img/expo_scale/expo-bg__dark.svg") 7;
+    padding: 6px;
+    color: $text-primary-invert;
+    font-size: $font-size-base;
+    font-weight: bold;
+
+    > StBoxLayout {
+        spacing: .4em;
+
+        > StBoxLayout {
+            spacing: .4em;
+        }
+    }
+}

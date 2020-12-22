@@ -1,0 +1,9 @@
+/* ======================================
+ * ! Tile Previews
+ * ====================================== */
+
+.tile-preview, .tile-hud {
+    background-color: rgba(#000, .75);
+
+    &.snap { background-color: rgba($accent-primary, .75); }
+}

@@ -1,0 +1,47 @@
+/* ======================================
+ * ! OSD
+ * ====================================== */
+
+.osd-window {
+    text-align: center;
+    font-weight: bold;
+    color: $text-primary;
+    padding: 18px;
+    margin: 32px;
+    min-width: 48px;
+    min-height: 48px;
+    border-image: url("img/containers/popup.svg") 7;
+
+    StIcon { color: $text-primary; }
+
+    &-label {
+        font-size: $font-size-mega;
+    }
+
+    .level {
+        border-radius: 0 !important;
+        border-image: url("img/controls/slider-OSD.svg") 9 8 8 8;
+        height: 8px;
+        padding: 5px;
+    }
+
+    .level-bar {
+        background-color: $accent-primary;
+        border-radius: 0 !important;
+    }
+
+    .pad-osd-title-box      { spacing: 12px; }
+    .pad-osd-title-menu-box { spacing: 6px; }
+}
+
+.resize-popup  {
+    background-color: transparent !important;
+    border: 0 solid rgba(0, 0, 0, 0) !important;
+    border-radius: 0 !important;
+
+    border-image: url("img/overview/overview-dark-bg.svg") 7;
+    color: $text-primary-invert;
+    font-weight: bold;
+    font-size: $font-size-lg;
+    padding: 8px;
+}

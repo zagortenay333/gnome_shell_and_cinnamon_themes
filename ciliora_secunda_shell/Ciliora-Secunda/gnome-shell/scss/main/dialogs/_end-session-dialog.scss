@@ -1,0 +1,166 @@
+/* ======================================
+ * ! End Session dialog
+ * ====================================== */
+
+.end-session-dialog {
+    spacing: 0 !important;
+    border: 0 rgba(0, 0, 0, 0) !important;
+
+    .modal-dialog-content-box {
+        padding-bottom: 14px !important;
+    }
+
+    &-layout {
+        padding-left: 1em;
+
+        &:rtl { padding-right: 1em; }
+    }
+
+    &-description {
+        width: 28em;
+        margin: .4em 0;
+
+        &:rtl { text-align: right; }
+    }
+
+    &-subject {
+        font-size: $font-size-xl;
+        font-weight: bold;
+        color: $text-primary;
+    }
+
+    .check-box {
+        margin-top: .4em;
+        margin-bottom: .4em;
+
+        StLabel {
+            font-weight: bold;
+            color: $text-warning;
+            padding-left: .4em;
+        }
+    }
+
+    &-warning {
+        width: 28em;
+        color: $text-danger;
+        padding-top: 0;
+
+        &:rtl { text-align: right; }
+    }
+
+    &-logout-icon {
+        border-radius: 0;
+        @include size(32px);
+        background-size: contain;
+    }
+
+    &-shutdown-icon {
+        color: $text-primary;
+        @include size(32px);
+    }
+
+    &-list {
+        border-image: url("img/containers/light-bg.svg") 6;
+        max-height: 230px;
+        padding: .3em 0 .3em 1.4em;
+        margin-top: 1em;
+
+        .framed-user-icon {
+            border: 0;
+            background-color: rgba(0, 0, 0, 0);
+            border-radius: 0;
+        }
+    }
+
+    &-inhibitor-layout {
+        padding: 0;
+        spacing: 0;
+        max-height: 200px;
+
+        > *:first-child {
+            padding-top: 1em;
+        }
+
+        > * {
+            padding-top: .5em;
+        }
+
+        > *:last-child {
+            padding-bottom: 1em;
+        }
+    }
+
+    &-list-header {
+        font-weight: bold;
+        padding-bottom: .5em;
+        color: $text-danger;
+
+        &:rtl {
+            text-align: right;
+        }
+    }
+
+    &-session-list,
+    &-app-list {
+        spacing: 1em;
+
+        .end-session-dialog-app-list-item:last-child {
+            padding-bottom: 1em;
+        }
+    }
+
+    &-app-list-item,
+    &-session-list-item {
+        spacing: 1em;
+
+        &:first-child {
+            border: 0 rgba(0, 0, 0, .05);
+            border-top-width: 1px;
+            padding-top: 1em;
+        }
+
+        &-name {
+            font-weight: bold;
+        }
+
+        &-description {
+            margin-top: .4em;
+            color: $text-secondary;
+            font-size: $font-size-base;
+        }
+    }
+}
+
+/* ======================================
+ * ! End-session & Logout dialog buttons
+ * ====================================== */
+
+.end-session-dialog .modal-dialog-linked-button {
+    @include btn-dialog(
+        m,
+        $text-danger,
+        primary,
+        $text-danger,
+        red
+    );
+
+    &:first-child {
+        @include btn-dialog(
+            f,
+            $text-success,
+            primary,
+            $text-success,
+            green
+        );
+    }
+
+    &:last-child {
+        @include btn-dialog(
+            l,
+            $text-danger,
+            primary,
+            $text-danger,
+            red
+        );
+    }
+}

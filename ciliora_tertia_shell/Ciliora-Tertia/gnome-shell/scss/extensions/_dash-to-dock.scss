@@ -1,0 +1,94 @@
+/* ======================================
+ * ! Dash-to-Dock extension
+ * ====================================== */
+
+#dashtodockContainer {
+    .app-well-app-running-dot { @include size(0); }
+
+    #dash { padding: 0; }
+
+    &.left {
+        .dash-item-container > * { padding: 0 0 2px 0; }
+
+        .overview-icon { padding: 8px 9px 8px 8px !important; }
+
+        .show-apps,
+        .app-well-app > * { padding: 0; }
+    }
+
+    &.right {
+        .dash-item-container > * { padding: 0 0 2px 0; }
+
+        .overview-icon { padding: 8px 8px 8px 9px !important; }
+
+        .show-apps,
+        .app-well-app > * { padding: 0; }
+    }
+
+    &.top {
+        .dash-item-container > * { padding: 0 2px 0 0; }
+
+        .overview-icon { padding: 8px 9px 9px 9px !important; }
+
+        .show-apps,
+        .app-well-app > * { padding: 0; }
+    }
+
+    &.bottom {
+        .dash-item-container > * { padding: 0 2px 0 0; }
+
+        .overview-icon { padding: 9px 9px 8px 9px !important; }
+
+        .show-apps,
+        .app-well-app > * { padding: 0; }
+    }
+}
+
+@each $d in left, right, top, bottom {
+@each $c in 1, 2, 3, 4 {
+    #dashtodockContainer.#{$d} {
+        #dash {
+            border-image: url("img/overview/overview-dark-bg-#{$d}.svg") 7;
+        }
+
+        &.extended #dash {
+            border-image: url("img/overview/overview-dark-bg-#{$d}--extended.svg") 7;
+        }
+
+        .app-well-app {
+            &:hover > * {
+                border-image: none;
+            }
+
+            &:hover .overview-icon {
+                border-image: url("img/overview/overview-light-bg__dash--#{$d}.svg") 7 !important;
+            }
+
+            &.running#{$c} {
+                &.focused .overview-icon,
+                &:hover .overview-icon, {
+                    border-image: url("img/overview/overview-light-bg__dash--#{$d}-active.svg") 7 !important;
+                }
+
+                > * {
+                    border-image: url("img/overview/app-indicator__#{$c}--#{$d}.svg") 14 !important;
+                }
+            }
+        }
+
+        .show-apps {
+            &:hover .overview-icon {
+                border-image: url("img/overview/overview-light-bg__dash--#{$d}.svg") 7 !important;
+            }
+
+            &:checked {
+                border-image: none;
+
+                .overview-icon {
+                    border-image: url("img/overview/overview-highlight-bg__dash--#{$d}.svg") 7 !important;
+                }
+            }
+        }
+    }
+}
+}

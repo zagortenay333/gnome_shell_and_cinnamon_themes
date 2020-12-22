@@ -1,0 +1,268 @@
+@import "../global/0-INDEX";
+
+
+/* ======================================
+ * ! Timepp applet
+ * ====================================== */
+.timepp-custom-css-root {
+    -timepp-project-color:    $text-success !important;
+    -timepp-context-color:    $text-info !important;
+    -timepp-link-color:       $text-link !important;
+    -timepp-due-date-color:   $text-danger !important;
+    -timepp-rec-date-color:   $text-warning !important;
+    -timepp-defer-date-color: $text-info !important;
+}
+
+.timepp-panel-box {
+    .panel-button {
+        margin-right: 0 !important;
+    }
+
+    .panel-button-content {
+        padding: 0 9px !important;
+    }
+
+    .on {
+        border-image: url("img/panel/active.svg") 4;
+        StLabel, StIcon { color: $text-primary-invert !important; }
+        &:hover, &:checked { border-image: url("img/panel/active-hover.svg") 4; }
+
+        &.alarm-panel-item {
+            border-image: none;
+            &:hover, &:checked { border-image: url("img/panel/panel-top__item--hover.svg") 4; }
+        }
+    }
+
+    .done StLabel, .done StIcon {
+        color: $accent-success !important;
+    }
+}
+
+.timepp-menu {
+    .timepp-menu-item {
+        padding: .5em 1.6em !important;
+    }
+
+    .radiobutton {
+        StBoxLayout {
+            spacing: .4em;
+            min-height: 20px;
+        }
+
+        StBin {
+            @include size(20px);
+            background-image: url("img/controls/radiobutton.svg") !important;
+        }
+
+        &:focus StBin {
+            background-image: url("img/controls/radiobutton-focused.svg") !important;
+            outline: none !important;
+        }
+
+        &:checked StBin {
+            background-image: url("img/controls/radiobutton-checked.svg") !important;
+        }
+
+        &:focus:checked StBin {
+            background-image: url("img/controls/radiobutton-focused-checked.svg") !important;
+            outline: none !important;
+        }
+    }
+
+    .view-box-content {
+        border-image: url("img/containers/light-bg.svg") 4 !important;
+    }
+
+    .btn-delete { @include btn-danger-primary; }
+
+    .popup-menu-content {
+        padding: 0 !important;
+        border-image: none !important;
+
+        > * > .timepp-separator {
+            padding: 0 !important;
+            min-height: 0 !important;
+            height: 0 !important;
+
+            .popup-separator-menu-item {
+                background-image: none !important;
+                height: 0 !important;
+            }
+        }
+    }
+
+    .numpicker {
+        border-image: none !important;
+        spacing: 0 !important;
+        padding: 0 !important;
+
+        &-counter {
+            border-image: url("img/containers/light-bg__first__horiz.svg") 10 !important;
+            padding: 0 .7em !important;
+        }
+
+        &-arrow-box {
+            border-image: url("img/containers/light-bg__last__horiz.svg") 10 !important;
+            padding: .2em .3em !important;
+        }
+
+        &-arrow:hover StIcon,
+        &-arrow:focus StIcon { color: $text-link !important; }
+    }
+
+    .icon-box StIcon:focus,
+    .icon-box StIcon:hover {
+        color: $text-link !important;
+
+        &.close-icon:hover,
+        &.close-icon:focus {
+            color: $text-danger !important;
+        }
+    }
+
+    .section {
+        padding: .8em 0 !important;
+        border-image: url("img/containers/popup-inside.svg") 10 !important;
+    }
+
+    .timer-section {
+        .timer-preset-item { border-image: url("img/containers/light-bg.svg") 10 !important; }
+        .timer-preset-item-default { border-image: url("img/containers/dark-bg.svg") 10 !important; }
+        .timer-preset-item-default-indicator-label { color: $text-success !important; }
+    }
+
+    .stopwatch-section {
+        .btn-reset { @include btn-danger-primary; }
+    }
+
+    .pomo-section {
+        .settings-item:first-child {
+            color: $text-danger !important;
+            font-weight: bold !important;
+        }
+    }
+
+    .alarm-section {
+        .alarm-item {
+            border-image: url("img/containers/light-bg-marked-grey.svg") 10 !important;
+            max-width: 220px !important;
+            padding: .8em .8em .8em 1em !important;
+            border-width: 0 !important;
+
+            &.active {
+                border-image: url("img/containers/light-bg-marked-blue.svg") 10 !important;
+            }
+        }
+
+        .add-alarm:focus,
+        .add-alarm:hover {
+            color: $text-link !important;
+        }
+
+        .row.days {
+            spacing: 0 !important;
+        }
+
+        .day {
+            @include btn-linked-primary;
+            padding: 1em 0 !important;
+
+            &:focus { outline: 0 !important; }
+        }
+    }
+
+    .todo-section {
+        padding: 0 !important;
+        border-image: none !important;
+
+        .view-box {
+            padding: .8em !important;
+            border-image: url("img/containers/popup-inside.svg") 10 !important;
+        }
+
+        .view-default {
+            padding: 0 !important;
+            border-image: none !important;
+
+            .view-box-content {
+                spacing : 0 !important;
+                border-image: none !important
+            }
+
+            .kanban-column {
+                padding: .8em 0 !important;
+                border-image: url("img/containers/popup-inside.svg") 10 !important;
+
+                &.collapsed {
+                    padding: 0 1em !important;
+
+                    StIcon:focus, StIcon:hover {
+                        color: $text-link !important;
+
+                        &.close-icon:hover,
+                        &.close-icon:focus {
+                            color: $text-danger !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .kanban-switcher-item,
+        .file-switcher-item { border-image: url("img/containers/light-bg.svg") 10 !important; }
+
+        .kanban-switcher-item-check-icon.active,
+        .file-switcher-item-check-icon.active { color: $text-success !important; }
+
+        .delete-complete-tasks-label,
+        .no-todo-file-msg { color: $text-danger !important; }
+
+        .loading-msg      { color: $text-info !important; }
+        .due-date-label   { color: $text-danger !important; }
+
+        .date-label,
+        .task-item.completed .due-date-label { color: $text-secondary !important; }
+
+        .tracker-pause-icon, .filter-icon.active { color: $text-warning !important; }
+
+        .link:focus,
+        .link:hover {
+            StLabel { color: $text-link !important; }
+        }
+
+        .add-task:focus,
+        .add-task:hover {
+            color: $text-link !important;
+        }
+
+        .task-item {
+            border-image: url("img/containers/light-bg-marked-grey.svg") 10 !important;
+
+            &.completed { border-image: url("img/containers/light-bg.svg") 10 !important; }
+
+            &.A {
+                .priority-label { color: $text-danger !important; }
+                border-image: url("img/containers/light-bg-marked-red.svg") 10 !important;
+            }
+
+            &.B {
+                .priority-label { color: $text-warning !important; }
+                border-image: url("img/containers/light-bg-marked-orange.svg") 10 !important;
+            }
+
+            &.C {
+                .priority-label { color: $text-info !important; }
+                border-image: url("img/containers/light-bg-marked-violet.svg") 10 !important;
+            }
+
+            &.D {
+                .priority-label { color: $text-success !important; }
+                border-image: url("img/containers/light-bg-marked-green.svg") 10 !important;
+            }
+
+            &.hidden-task {
+                border-image: url("img/containers/dark-bg.svg") 10 !important;
+            }
+        }
+    }
+}

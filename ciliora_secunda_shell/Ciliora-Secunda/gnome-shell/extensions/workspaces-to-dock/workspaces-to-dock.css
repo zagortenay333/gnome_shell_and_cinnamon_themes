@@ -1,0 +1,256 @@
+/* =====================================================
+ * ! Floating bg
+   ===================================================== */
+
+#workspacestodockDock.right .workspace-thumbnails {
+    border-image: url("../../img/overview/overview-dark-bg-right.svg") 7 !important;
+    padding: 10px 9px 10px 10px;
+}
+
+#workspacestodockDock.left .workspace-thumbnails {
+    border-image: url("../../img/overview/overview-dark-bg-left.svg") 7 !important;
+    padding: 10px 10px 10px 9px;
+}
+
+#workspacestodockDock.top .workspace-thumbnails {
+    border-image: url("../../img/overview/overview-dark-bg-top.svg") 7 !important;
+    padding: 9px 10px 10px 10px;
+}
+
+#workspacestodockDock.bottom .workspace-thumbnails {
+    border-image: url("../../img/overview/overview-dark-bg-bottom.svg") 7 !important;
+    padding: 10px 10px 9spx 10px;
+}
+
+
+/* =====================================================
+ * ! Extended bg
+   ===================================================== */
+
+#workspacestodockDock.right.fullheight .workspace-thumbnails {
+    border-image: url("../../img/overview/overview-dark-bg-right--extended.svg") 7 !important;
+    padding: 10px 9px 10px 10px;
+}
+
+#workspacestodockDock.left.fullheight .workspace-thumbnails {
+    border-image: url("../../img/overview/overview-dark-bg-left--extended.svg") 7 !important;
+    padding: 10px 10px 10px 9px;
+}
+
+#workspacestodockDock.top.fullheight .workspace-thumbnails {
+    border-image: url("../../img/overview/overview-dark-bg-top--extended.svg") 7 !important;
+    padding: 9px 10px 10px 10px;
+}
+
+#workspacestodockDock.bottom.fullheight .workspace-thumbnails {
+    border-image: url("../../img/overview/overview-dark-bg-bottom--extended.svg") 7 !important;
+    padding: 10px 10px 9px 10px;
+}
+
+/* =====================================================
+ * ! Indicator
+   ===================================================== */
+
+#workspacestodockDock .workspace-thumbnail-indicator {
+    border-image: url("../../img/overview/workspace-indicator-right.svg") 7 !important;
+    border-width: 10px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+}
+
+#workspacestodockDock.left .workspace-thumbnail-indicator {
+    border-image: url("../../img/overview/workspace-indicator-left.svg") 7 !important;
+    border-width: 10px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+}
+
+#workspacestodockDock.top .workspace-thumbnail-indicator {
+    border-image: url("../../img/overview/workspace-indicator-top.svg") 7 !important;
+    border-width: 10px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+}
+
+#workspacestodockDock.bottom .workspace-thumbnail-indicator {
+    border-image: url("../../img/overview/workspace-indicator-bottom.svg") 7 !important;
+    border-width: 10px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+}
+
+.workspacestodock-shortcuts-panel {
+    padding: 2px;
+    spacing: 0px;
+}
+
+.workspacestodock-shortcuts-panel-popupmenu {
+    padding: 2px;
+    spacing: 0px;
+}
+
+.workspacestodock-shortcuts-panel-favorites {
+}
+
+.workspacestodock-shortcuts-panel-running {
+}
+
+/* shortcuts panel buttons */
+#workspacestodockContainer .app-well-app {
+}
+.workspacestodock-shortcut-button {
+}
+.workspacestodock-shortcut-button-symbolic {
+}
+
+/* shortcuts panel button icons */
+#workspacestodockContainer .app-well-app > .overview-icon {
+}
+.workspacestodock-shortcut-button-icon {
+    padding: 6px;
+}
+.workspacestodock-shortcut-button-symbolic-icon {
+    padding: 8px;
+}
+
+#workspacestodockContainer .popup-separator-menu-item {
+    margin: 2px;
+}
+.workspacestodock-shortcut-panel-separator {
+    -margin-horizontal: 2px;
+}
+
+.workspacestodock-shortcut-panel-filler {
+    -gradient-height: 1px;
+    -gradient-start: rgba(255,255,255,0.0);
+    -gradient-end: rgba(255,255,255,0.0);
+    -margin-horizontal: 2px;
+    height: 1px;
+    padding: 0px;
+}
+
+.workspacestodock-workspace-caption-container {
+    border: 1px rgba(0, 0, 0, .85);
+}
+
+.workspacestodock-workspace-caption-background {
+    background-color: rgba(10, 10 , 10, .4);
+    border: 1px transparent;
+    border-top-color: rgba(0, 0, 0, .85);
+}
+
+.workspacestodock-workspace-caption {
+}
+
+/* caption window apps (taskbar) */
+.workspacestodock-caption-windowapps {
+    padding: 0;
+}
+
+.workspacestodock-caption-windowapps-menu {
+    -boxpointer-gap: 16px;
+}
+
+.workspacestodock-caption-windowapps-menu-icon {
+}
+
+.workspacestodock-caption-windowapps-menu-label {
+    padding: 0px 10px 0px 10px;
+}
+
+.workspacestodock-caption-windowapps-menu-item:active .window-close {
+    background-image: url("../../img/controls/close-simple-active.svg");
+}
+
+.workspacestodock-caption-windowapps-menu-item .window-close {
+    background-image: url("../../img/controls/close-simple.svg");
+    background-size: 24px;
+    height: 24px;
+    width: 24px;
+    margin: 2px 0;
+}
+
+.workspacestodock-caption-windowapps-button {
+    margin: 1px;
+}
+
+.workspacestodock-caption-windowapps-button-icon {
+    padding: 0px;
+    background-color: rgba(30, 30, 30, .65);
+    border: 0px rgba(0, 0, 0, .55);
+}
+
+.workspacestodock-caption-windowapps-button-active > .workspacestodock-caption-windowapps-button-icon {
+    background-color: rgba(141, 174, 203, .8);
+    border: 0px rgba(0, 19, 34, .85);
+}
+
+/* caption workspace number */
+.workspacestodock-caption-number {
+    color: rgba(255, 255, 255, .4);
+    font-size: 9pt;
+    font-family: Roboto;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* caption workspace name */
+.workspacestodock-caption-name {
+    color: rgba(255, 255, 255, .7);
+    font-size: 9pt;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 4px;
+}
+
+/* caption workspace windowcount */
+.workspacestodock-caption-windowcount {
+    min-width: 7px;
+    color: rgba(255, 255, 255, .7);
+    background-color: rgba(255, 255, 255, .2);
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 10px;
+}
+
+/* caption workspace windowcount image*/
+.workspacestodock-caption-windowcount-image {
+    width: 20px;
+    height: 16px;
+}
+
+/* The classes below are used in conjunction with the above workspacestodock-caption-windowcount-image
+ * They provide background images that corespond with the window count */
+.workspacestodock-caption-windowcount-image-1 {
+}
+.workspacestodock-caption-windowcount-image-2 {
+}
+.workspacestodock-caption-windowcount-image-3 {
+}
+.workspacestodock-caption-windowcount-image-4 {
+}
+
+/* caption spacer-filler */
+.workspacestodock-caption-spacer {
+    border: 1px solid rgba(0, 0, 0, 0);
+    width: 1px;
+}
+
+/* The classes below are used in conjuction with the above classes
+ * They provide additional theming for the current workspace caption */
+.workspacestodock-workspace-caption-background-current {
+}
+
+.workspacestodock-caption-number-current {
+}
+
+.workspacestodock-caption-name-current {
+}
+
+.workspacestodock-caption-windowcount-current {
+}
+
+.workspacestodock-caption-windowcount-image-current {
+}

@@ -1,0 +1,300 @@
+/* ======================================
+ * ! Login and Lock Screen
+ * ====================================== */
+
+#lockDialogGroup {
+    background: #323436 url("img/overview/overview-pattern.svg");
+    background-repeat: repeat;
+}
+
+.unlock-screen,
+.login-screen,
+.lock-screen {}
+
+.login-dialog {
+    border: none;
+    background-color: transparent;
+
+    &-prompt-layout {
+        padding-top: 24px;
+        padding-bottom: 12px;
+        spacing: 8px;
+        width: 23em;
+    }
+
+    &-prompt-label {
+        color: $text-secondary;
+        font-size: $font-size-base;
+        padding-top: 1em;
+    }
+
+    .framed-user-icon {
+        border-image: url("img/overview/overview-dark-bg.svg") 6;
+        background-size: contain;
+        color: $text-primary;
+        padding: 6px;
+    }
+
+    &-username,
+    .user-widget-label {
+        color: #fff;
+        font-size: $font-size-lg;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 15px;
+
+        &:ltr {
+            padding-left: 18px;
+        }
+
+        &:rtl {
+            padding-right: 18px;
+        }
+    }
+
+    &-message-warning {
+        color: $text-warning;
+    }
+
+    &-message-hint {
+        color: $text-info;
+    }
+
+    &-banner-view {
+        padding-top: 24px;
+        max-width: 23em;
+    }
+
+    &-banner {
+        color: $text-primary;
+        font-size: $font-size-lg;
+    }
+
+    &-logo-bin {
+        padding: 24px 0;
+    }
+
+    &-user-selection-box {
+        padding: 100px 0px;
+
+        .login-dialog-not-listed-label {
+            padding-left: 2px;
+        }
+    }
+
+    &-not-listed-button {
+        color: $text-secondary;
+
+        &:focus,
+        &:hover {
+            color: $text-primary;
+        }
+    }
+
+    &-not-listed-label {
+        padding-top: 1em;
+        font-size: $font-size-base;
+        font-weight: normal;
+    }
+
+    &-session-list-button {
+        color: $text-secondary;
+        padding: 0 !important;
+
+        &:active,
+        &:hover,
+        &:focus {
+            color: $text-primary;
+        }
+
+        StIcon {
+            icon-size: 16px;
+        }
+    }
+
+    &-user-list-view {
+        -st-vfade-offset: 0;
+        max-height: 600px;
+
+        StScrollBar {
+            padding: 0 0 0 6px;
+        }
+
+        StButton#vhandle,
+        StButton#hhandle {
+            border-image: url("img/controls/overview-scroll-handle.svg") 6;
+        }
+
+        StButton#vhandle:hover,
+        StButton#hhandle:hover,
+        StButton#vhandle:focus,
+        StButton#hhandle:focus,
+        StButton#vhandle:active,
+        StButton#hhandle:active {
+            border-image: url("img/controls/overview-scroll-handle-hover.svg") 6;
+        }
+    }
+
+    &-user-list {
+        spacing: 12px;
+        padding: 0;
+        width: 23em;
+    }
+
+    &-user-list-item {
+        border-image: url("img/overview/overview-dark-bg.svg") 6;
+        padding: 4px;
+        color: $text-primary;
+
+        &:ltr { padding-right: 1em; }
+
+        &:rtl { padding-left: 1em; }
+
+        &:hover,
+        &:focus {
+            border-image: url("img/overview/overview-light-bg.svg") 6;
+        }
+
+        &:logged-in {
+            border-image: url("img/overview/user-logged-in.svg") 6;
+
+            &:hover, &:focus {
+                border-image: url("img/overview/user-logged-in-hover.svg") 6;
+            }
+        }
+
+        .login-dialog-timed-login-indicator {
+            height: 2px;
+            margin: 0;
+            background-color: $accent-primary;
+        }
+
+        &:focus .login-dialog-timed-login-indicator {
+            background-color: $accent-primary;
+        }
+
+        .framed-user-icon {
+            border-image: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &-button-box {
+        spacing: 0;
+
+        // spinner image
+        StWidget { padding: 0 .3em; }
+    }
+
+    .modal-dialog-button,
+    .modal-dialog-button:default {
+        @include btn-overview;
+        @include btn-width(wide);
+    }
+
+    StEntry {
+        @include entry(overview--normal);
+
+        &:focus { @include entry(overview--focus); }
+    }
+}
+
+/* ======================================
+ * ! Screen Shield
+ * ====================================== */
+
+#lockScreenContents {
+    background-color: rgba(#131619, .7);
+}
+
+.screen-shield-background {
+    background: #666;
+}
+
+.screen-shield-contents-box {
+    padding: 16px;
+    spacing: 20px;
+}
+
+.screen-shield-arrows {
+    background-image: url("img/misc/lock.svg");
+    @include size(24px);
+    margin-bottom: 32px;
+
+    Gjs_Arrow {
+        color: transparent;
+        @include size(0);
+        -arrow-thickness: 0;
+        -arrow-shadow: 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+.screen-shield-clock {
+    font-weight: normal;
+    text-align: center;
+
+    &-time {
+        color: $text-primary;
+        font-size: $font-size-mega;
+    }
+
+    &-date {
+        color: $text-secondary;
+        font-size: $font-size-xxl;
+        padding: 0 10px;
+    }
+}
+
+.screen-shield-notifications-container {
+    spacing: 4px;
+    min-width: 30em;
+    background-color: transparent;
+    max-height: 394px;
+    padding-left: 8px;
+
+    .summary-notification-stack-scrollview {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .notification,
+    .screen-shield-notification-source {
+        border-image: url("img/overview/overview-light-bg.svg") 6;
+        padding: .6em;
+        color: $text-primary;
+        font-family: $font-family;
+        spacing: 10px;
+    }
+}
+
+.screen-shield-notification-label {
+    font-weight: bold;
+    font-size: $font-size-lg;
+    padding: .2em 0 0 0;
+}
+
+.screen-shield-notification-count-text {
+    padding: .6em 0 0 0;
+}
+
+#screenShieldNotifications {
+    StScrollBar {
+        padding: 0 0 0 6px;
+        min-height: 10px;
+        min-width: 10px;
+    }
+
+    StButton#vhandle,
+    StButton#hhandle {
+        border-image: url("img/controls/overview-scroll-handle.svg") 4;
+
+        &:hover, &:focus {
+            border-image: url("img/controls/overview-scroll-handle-hover.svg") 4;
+        }
+
+        &:active {
+           border-image: url("img/controls/overview-scroll-handle-hover.svg") 4;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+/* ======================================
+ * ! Run dialog
+ * ====================================== */
+
+.run-dialog {
+    // remove buttons
+    > *:last-child {
+        background-color: rgba(0, 0, 0, 0);
+        border-image: none;
+        box-shadow: none;
+        padding: 0;
+        padding-top: 0;
+        height: 0;
+
+        * { border-image: none !important; }
+    }
+
+    .modal-dialog-content-box {
+        padding: 12px !important;
+    }
+
+    &-error-box {
+        padding: .3em .1em .3em .2em;
+        margin-top: 6px;
+        spacing: 0;
+        color: $text-danger;
+        font-weight: bold;
+
+        StIcon {
+            @include size(0);
+            color: $text-danger;
+        }
+    }
+
+    &-label {
+        font-size: 0;
+        padding-bottom: 0 !important;
+    }
+
+    &-entry {
+        margin-bottom: 0;
+        width: 18em;
+    }
+}

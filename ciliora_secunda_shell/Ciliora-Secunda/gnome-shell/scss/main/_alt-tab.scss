@@ -1,0 +1,78 @@
+/* ======================================
+ * ! Alt Tab
+ * ====================================== */
+
+.switcher-popup {
+    padding: 0;
+    spacing: 0;
+}
+
+.switcher-list {
+    border-image: url("img/containers/popup-outside.svg") 9;
+    color: $text-primary;
+    padding: 2px;
+    margin: 2px;
+    font-size: $font-size-base;
+    font-weight: bold;
+
+    &-item-container {
+        spacing: 1px;
+    }
+
+    > StLabel {
+        padding: 4px 8px 8px 8px;
+    }
+
+    .item-box {
+        border-radius: 0 !important;
+        border-image: url("img/containers/popup-inside-2.svg") 9;
+        padding: 10px;
+
+        StLabel {
+            padding-top: 6px;
+        }
+    }
+
+    .item-box:outlined {
+        border-image: url("img/containers/popup-inside-2-active.svg") 7;
+    }
+
+    .item-box:selected {
+        border-image: url("img/containers/popup-inside-2-active.svg") 7;
+    }
+
+    .thumbnail-box {
+        padding: 2px;
+        spacing: 4px;
+    }
+
+    .thumbnail {
+        width: 256px;
+    }
+
+    .separator {
+        width: 1px;
+        background: rgba(0, 0, 0, .1);
+    }
+
+    .switcher-arrow {
+        color: transparent !important;
+        height: 16px;
+        background-image: url("img/misc/calendar-today.svg");
+        background-size: contain;
+
+        &:highlighted { color: transparent !important; }
+    }
+}
+
+.input-source-switcher-symbol {
+    @include size(96px);
+    icon-size: 96px;
+    font-size: $font-size-xxxl;
+}
+
+// Alt-Esc
+.cycler-highlight {
+    border: 5px $accent-primary;
+    background: rgba($accent-primary, .1);
+}

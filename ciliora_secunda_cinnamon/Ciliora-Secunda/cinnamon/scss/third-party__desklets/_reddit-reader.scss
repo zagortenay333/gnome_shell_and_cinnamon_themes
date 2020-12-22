@@ -1,0 +1,64 @@
+/* ======================================
+ * ! Reddit reader
+ * ====================================== */
+
+.reddit-reader {
+    border-image: url("img/containers/popup.svg") 9;
+    padding: 2px;
+    color: $text-primary;
+
+    StScrollBar {
+        padding: 3px 5px 8px 3px;
+    }
+}
+
+/* Title */
+.reddit-title-bar {
+    border-image: url("img/containers/submenu--top.svg") 9;
+    padding: 10px;
+    font-size: $font-size-lg;
+    font-weight: bold;
+}
+
+.reddit-header-icon {
+    padding-right: 6px;
+    icon-size: 16px;
+    color: $text-primary;
+}
+
+.reddit-title {
+    padding-right: 6px;
+    font-size: $font-size-xxl;
+}
+
+.reddit-subtitle {
+    color: $text-secondary;
+    font-size: $font-size-lg;
+}
+
+/* Posts */
+.reddit-posts-box {
+    spacing: 4px;
+    padding: 8px;
+    padding-top: 1px;
+    padding-right: 0;
+}
+
+.reddit-post {
+    border-image: url("img/containers/light-bg--top__vertical.svg") 9;
+    padding: 8px;
+    color: $text-primary;
+    font-size: $font-size-base;
+    font-weight: bold;
+
+    &:hover {
+        color: $text-link;
+    }
+}
+
+.reddit-info-box {
+    border-image: url("img/containers/light-bg--bottom__vertical.svg") 9;
+    padding: 8px;
+    font-size: $font-size-base;
+    color: $text-secondary;
+}

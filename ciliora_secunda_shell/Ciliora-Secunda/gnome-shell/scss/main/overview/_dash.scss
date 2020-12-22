@@ -1,0 +1,72 @@
+/* ======================================
+ * ! Dash
+ * ====================================== */
+
+#dash {
+    border-image: url("img/overview/overview-dark-bg-left.svg") 7;
+    font-size: $font-size-base;
+    padding: 4px 0;
+    background-color: transparent !important;
+    border: 0 transparent !important;
+    border-radius: 0 !important;
+
+    &:rtl {
+        border-image: url("img/overview/overview-dark-bg-right.svg") 7;
+        border-radius: 0;
+    }
+
+    .placeholder {
+        background-image: none;
+        @include size(16px);
+    }
+
+    .empty-dash-drop-target {
+        @include size(24px);
+    }
+}
+
+.dash-label {
+    border-image: url("img/overview/overview-dark-bg.svg") 7;
+    padding: 4px 10px;
+    -x-offset: 8px;
+    color: $text-primary;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+}
+
+/* ======================================
+ * ! Dash Icons
+ * ====================================== */
+
+.show-apps-icon { color: $text-primary; }
+
+.overview-icon {
+    .show-apps &,
+    .dash-item-container .app-well-app & {
+        background-color: transparent !important;
+        box-shadow: 0 0 transparent !important;
+        border: 0 transparent !important;
+        border-radius: 0 !important;
+        transition-duration: 0ms !important;
+        padding: 9px !important;
+    }
+
+    .show-apps:hover &,
+    .show-apps:focus &,
+    .show-apps:selected &,
+    .show-apps:active &,
+    .show-apps:checked &,
+    .dash-item-container .app-well-app:hover &,
+    .dash-item-container .app-well-app:focus &,
+    .dash-item-container .app-well-app:selected &,
+    .dash-item-container .app-well-app:active &,
+    .dash-item-container .app-well-app:checked & {
+        border-image: url("img/overview/overview-light-bg.svg") 7;
+    }
+}
+
+.dash-item-container > StWidget {
+    padding: 2px 6px;
+}

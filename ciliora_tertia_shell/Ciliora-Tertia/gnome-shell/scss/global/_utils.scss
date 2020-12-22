@@ -1,0 +1,7 @@
+// produce width and height
+@mixin size($width, $height:$width, $important:false) {
+    $important: if($important, !important, null);
+
+    width: $width $important;
+    height: $height $important;
+}

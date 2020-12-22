@@ -1,0 +1,104 @@
+/* ======================================
+ * ! Candidate Popup
+ * ====================================== */
+
+.candidate-popup-boxpointer {
+    padding: 0;
+    -arrow-border-radius: 0;
+    -arrow-background-color: rgba(#131619, .9);
+    -arrow-border-color: rgba(0, 0, 0, .9);
+    -arrow-border-width: 1px;
+    -arrow-base: 12px;
+    -arrow-rise: 6px;
+    -boxpointer-gap: 0;
+}
+
+.candidate-popup-content {
+    border-image: url("img/containers/popup-inside.svg") 7;
+    padding: .2em;
+    spacing: .5em;
+    color: $text-primary;
+}
+
+.candidate-index {
+    color: $text-secondary;
+    font-weight: normal;
+    font-size: $font-size-lg;
+    margin: 0 .7em 0 0;
+}
+
+.candidate-label {
+    color: $text-primary;
+    font-weight: bold;
+    font-size: $font-size-lg;
+}
+
+.candidate-popup-text {
+    color: $text-primary;
+    font-weight: bold;
+    font-size: $font-size-lg;
+    padding: .7em;
+    border-image: url("img/containers/submenu--top.svg") 7;
+}
+
+.candidate-box {
+    font-size: $font-size-lg;
+    border-radius: 0 !important;
+
+    &:selected,
+    &:hover {
+        border-image: url("img/containers/hover-popup.svg") 7;
+    }
+
+    .vertical & {
+        padding: .4em .7em; margin: .2em 0;
+    }
+
+    .horizontal & {
+        padding: 0 1em; margin: 0 0 .7em .7em;
+    }
+}
+
+.candidate-page-button {
+    padding: 0;
+
+    &-box {
+        padding: .6em;
+        min-height: 32px;
+
+        .vertical & {
+            padding-top: 0;
+        }
+
+        .horizontal & {
+            padding: 0; margin: 0 .7em .7em .7em;
+        }
+    }
+
+    &-previous {
+        @include btn(
+            f,
+            $text-primary,
+            primary,
+            $text-link,
+            blue
+        );
+        @include btn-width(small);
+    }
+
+    &-next {
+        @include btn(
+            l,
+            $text-primary,
+            primary,
+            $text-link,
+            blue
+        );
+        @include btn-width(small);
+    }
+
+    &-icon {
+        icon-size: 16px;
+        color: $text-primary;
+    }
+}

@@ -1,0 +1,22 @@
+/* ======================================
+ * ! Apps menu extension
+ * ====================================== */
+
+.calendar-vertical-separator {
+    background-color: rgba(#000, .05);
+    width: 1px;
+    margin: 0 10px;
+}
+
+.apps-menu {
+    .popup-menu-item {
+        padding-right: .9em;
+
+        &:ltr { padding-right: .9em; }
+        &:rtl { padding-left: .9em; }
+    }
+
+    .popup-menu-ornament {
+        width: 0;
+    }
+}

@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# ======================================
+#  Constants
+# ======================================
+theme='Numix-Cinnamon'
+
+theme_dir=~/'.themes'
+
+sass_cmd='sassc'
+
+sass_input='scss/cinnamon.scss'
+
+sass_output='cinnamon.css'
+
+sass_style='expanded'
+
+watch_dirs=(
+    'img'
+    'scss'
+)
+
+
+# ======================================
+#  Functions
+# ======================================
+compile_sass () {
+    "$sass_cmd" -t "$sass_style" "$sass_input" > "$sass_output"
+}
+
+restart_theme () {
+    gsettings set org.cinnamon.theme name "$theme"
+}
+
+symlink_theme () {
+    mkdir -p "$theme_dir"
+    rm -rf "$theme_dir/$theme"
+    ln -rfs "../../$theme" "$theme_dir"
+}
+
+
+# ======================================
+#  Watch loop
+# ======================================
+symlink_theme
+
+while
+    compile_sass
+    restart_theme
+
+    # test
+    inotifywait --format '%e %w%f' -qre modify "${watch_dirs[@]}"
+do :; done

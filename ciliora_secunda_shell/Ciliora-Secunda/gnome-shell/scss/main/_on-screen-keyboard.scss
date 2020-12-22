@@ -1,0 +1,65 @@
+/* ======================================
+ * ! On screen keyboard
+ * ====================================== */
+
+#keyboard {
+    border-image: url("img/overview/overview-dark-bg-bottom--extended.svg") 7;
+}
+
+.keyboard-layout {
+    spacing: 5px;
+    padding: 8px;
+}
+
+.keyboard-row {
+    spacing: 5px;
+}
+
+.keyboard-key {
+    @include btn-primary;
+    @include btn-width(small);
+    font-size: $font-size-xl !important;
+}
+
+/* Backspace, return, hide-keyboard & abc/123 keys */
+.keyboard-layout > *:first-child .keyboard-row > *:last-child,
+.keyboard-layout .keyboard-row:last-child > *:last-child,
+.keyboard-layout > *:last-child .keyboard-row:last-child > *:last-child,
+.keyboard-layout > *:last-child .keyboard-row:first-child > *:first-child {
+    @include btn-secondary;
+}
+
+/* Shift key
+ *
+ * Style the first key in each row
+ * as well as the spacebar, then reset
+ * the other keys
+ */
+.keyboard-layout .keyboard-row > *:first-child {
+    @include btn-secondary;
+}
+
+/* Reset the style for the spacebar and the first keys
+ * in the first/second row
+ */
+.keyboard-layout > *:first-child .keyboard-row > *:first-child,
+.keyboard-layout > *:last-child .keyboard-row > *,
+.keyboard-layout .keyboard-row:last-child > *:first-child {
+    @include btn-primary;
+}
+
+/* subkeys popup */
+.keyboard-subkeys {
+    padding: 0;
+    -arrow-border-radius: 0;
+    -arrow-background-color: rgba(#131619, .9);
+    -arrow-border-color: rgba(0, 0, 0, .9);
+    -arrow-border-width: 1px;
+    -arrow-base: 12px;
+    -arrow-rise: 6px;
+    -boxpointer-gap: 0;
+
+    > * > *:last-child {
+        border-image: url("img/containers/popup-inside.svg") 7;
+    }
+}

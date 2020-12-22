@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# ======================================
+#  Constants
+# ======================================
+theme='Ciliora-Secunda'
+
+theme_dir=~/'.themes'
+
+sass_cmd='sassc'
+
+sass_style='expanded'
+
+# @key : input
+# @val : output
+declare -A sass_io=(
+    ['scss/gnome-shell.scss']='gnome-shell.css'
+    ['scss/extensions/timepp.scss']='timepp.css'
+)
+
+watch_dirs=(
+    'extensions'
+    'img'
+    'scss'
+)
+
+
+# ======================================
+#  Functions
+# ======================================
+compile_sass () {
+    for i in "${!sass_io[@]}"; do
+        "$sass_cmd" -t "$sass_style" "$i" > "${sass_io[$i]}"
+    done
+}
+
+restart_theme () {
+    gsettings set org.gnome.shell.extensions.user-theme name "$theme"
+}
+
+symlink_theme () {
+    mkdir -p "$theme_dir"
+    rm -rf "$theme_dir/$theme"
+    ln -rfs "../../$theme" "$theme_dir"
+}
+
+
+# ======================================
+#  Watch loop
+# ======================================
+symlink_theme
+
+while
+    compile_sass
+    restart_theme
+
+    # test
+    inotifywait --format '%e %w%f' -qre modify "${watch_dirs[@]}"
+do :; done

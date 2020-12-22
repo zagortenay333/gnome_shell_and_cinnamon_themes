@@ -1,0 +1,41 @@
+/* ======================================
+ * ! Modal dialogs
+ * ====================================== */
+
+#modalDialogGroup > * {
+    background-color: rgba(#131619, .5);
+}
+
+.headline {
+    font-size: $font-size-xl;
+    font-weight: bold;
+}
+
+.modal-dialog {
+    border-image: url("img/containers/popup.svg") 9;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: 0 transparent !important;
+    border-radius: 0;
+    color: $text-primary;
+    padding: 0;
+
+    &-content-box {
+        padding: 24px !important;
+        border-radius: 0;
+    }
+
+    > *:last-child {
+        spacing: 0;
+        margin: 0;
+        padding: 0 3px 0 3px;
+    }
+
+    .framed-user-icon {
+        border-image: none;
+        color: $text-primary;
+    }
+}
+
+.modal-dialog-linked-button {
+    @include btn-dialog-primary;
+}

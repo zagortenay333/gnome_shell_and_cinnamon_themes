@@ -1,0 +1,59 @@
+/* ======================================
+ * ! Aggregate Menu
+ * ====================================== */
+
+.system-switch-user-submenu-icon {
+    border: 0 solid transparent !important;
+    padding: 0;
+
+    &.user-icon,
+    &.default-icon {
+        icon-size: 16px;
+    }
+}
+
+.system-menu-action {
+    color: $text-primary;
+    border-radius: 0;
+    padding: 10px;
+    border: 0 solid transparent !important;
+
+    &:hover, &:focus, &:active {
+        color: $text-primary;
+        border-radius: 0;
+        padding: 10px;
+        border: 0 solid transparent !important;
+        border-image: url("img/containers/hover.svg") 6;
+    }
+
+    > StIcon { icon-size: 16px; }
+}
+
+.aggregate-menu {
+    min-width: 21em;
+
+    .popup-menu-icon {
+        padding: 0;
+    }
+
+    StBoxLayout:last-child > *:last-child {
+        > .popup-menu-item:last-child {
+            margin-bottom: .5em;
+            padding-top: 0;
+            padding-bottom: 0;
+       }
+   }
+
+    .system-menu-action:last-child {
+        &:hover, &:focus, &:active {
+            border-image: url("img/containers/hover-red.svg") 6;
+        }
+    }
+
+    // fix for media player extension
+    .popup-sub-menu .system-menu-action:last-child {
+        &:hover, &:focus, &:active {
+            border-image: url("img/containers/hover.svg") 6;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+/* ======================================
+ * ! Panel
+ * ====================================== */
+
+#panel {
+    background-color: rgba(#000, .75);
+    font-size: $font-size-base;
+    @include size(32px, 26px);
+
+    &.panel-top    { box-shadow: 0 1px  rgba(#fff, .1); }
+
+    &.panel-bottom { box-shadow: 0 -1px rgba(#fff, .1); }
+
+    &.panel-left   { box-shadow: 1px 0  rgba(#fff, .1); }
+
+    &.panel-right  { box-shadow: -1px 0 rgba(#fff, .1); }
+
+    &:highlight { background-color: rgba($accent-primary, .75); }
+}
+
+@each $pos in top, bottom, left, right {
+    .panel-#{$pos} {
+        .panelLeft:dnd,
+        .panelRight:dnd,
+        .panelLeft.vertical:dnd,
+        .panelRight.vertical:dnd {
+            border-image: url("img/panel/DND__panel-#{$pos}__side.svg") 4;
+        }
+
+        .panelCenter:dnd,
+        .panelCenter.vertical:dnd {
+            border-image: url("img/panel/DND__panel-#{$pos}__center.svg") 4;
+        }
+    }
+}
+
+.panel-dummy {
+    background-color: rgba($accent-primary, .75);
+
+    &:entered { background-color: $accent-primary; }
+}
+

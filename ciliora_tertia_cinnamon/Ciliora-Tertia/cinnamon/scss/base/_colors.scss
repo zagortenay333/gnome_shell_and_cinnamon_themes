@@ -1,0 +1,21 @@
+// accent colors
+$accent-primary: #5a94dc;
+$accent-success: #38ae72;
+$accent-info:    #8b5bff;
+$accent-warning: #ee993e;
+$accent-danger:  #e74f4f;
+
+// text colors
+$text-primary:   rgba(#000, .77);
+$text-secondary: rgba(#000, .48);
+$text-disabled:  rgba(#000, .28);
+
+$text-primary-invert:   #fff;
+$text-secondary-invert: rgba(#fff, .65);
+$text-disabled-invert:  rgba(#fff, .3);
+
+$text-link:    saturate(darken($accent-primary, 15%), 100%);
+$text-success: saturate(darken($accent-success, 15%), 100%);
+$text-info:    saturate(darken($accent-info,    15%), 100%);
+$text-warning: saturate(darken($accent-warning, 11%), 100%);
+$text-danger:  saturate(darken($accent-danger,   8%),   0%);

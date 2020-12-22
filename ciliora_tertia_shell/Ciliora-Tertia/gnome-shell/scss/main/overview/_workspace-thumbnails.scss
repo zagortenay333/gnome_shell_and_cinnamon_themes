@@ -1,0 +1,38 @@
+/* ======================================
+ * ! Workspace Thumbnails
+ * ====================================== */
+.overview-controls {
+    padding-bottom: 32px;
+}
+
+.workspace-thumbnails {
+    background-color: transparent !important;
+    border: 0 transparent !important;
+
+    border-image: url("img/overview/overview-dark-bg-right.svg") 7;
+    visible-width: 4px;
+    spacing: 10px;
+    padding: 10px 9px 10px 10px;
+    border-radius: 0;
+    color: $text-primary-invert;
+
+      &:rtl {
+        border-image: url("img/overview/overview-dark-bg-left.svg") 7;
+        padding: 10px 12px 10px 10px;
+      }
+}
+
+.workspace-thumbnail-indicator {
+    padding: 0 !important;
+    border-width: 10px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+
+    &:ltr {
+        border-image: url("img/overview/workspace-indicator-right.svg") 10;
+    }
+
+    &:rtl {
+        border-image: url("img/overview/workspace-indicator-left.svg") 10;
+    }
+}

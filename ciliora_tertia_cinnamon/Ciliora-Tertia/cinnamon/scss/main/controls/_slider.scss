@@ -1,0 +1,23 @@
+/* ======================================
+ * ! Slider
+ * ====================================== */
+
+.slider {
+    height: 16px;
+    min-width: 15em;
+    -slider-height: 0;
+    -slider-background-color: rgba(0, 0, 0, 0);
+    -slider-border-color: rgba(0, 0, 0, 0);
+    -slider-active-background-color: rgba(0, 0, 0, 0);
+    -slider-active-border-color: $accent-primary;
+    -slider-border-width: 4px;
+    -slider-handle-radius: 4px;
+    border-image: url("img/controls/slider.svg") 6 6 0 0;
+    color: #383838;
+
+    .popup-menu-item:active & {
+        border-image: url("img/controls/slider-hover.svg") 6 6 0 0;
+        -slider-active-border-color: transparentize(darken($accent-primary, 30%), .7);
+        color: $text-primary-invert;
+    }
+}

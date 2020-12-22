@@ -1,0 +1,109 @@
+@mixin entry($t, $width:null) {
+    @if $t==normal {
+        background-gradient-direction: none;
+        background-gradient-start: rgba(0, 0, 0, 0);
+        background-gradient-end: rgba(0, 0, 0, 0);
+        box-shadow: 0 0 rgba(0, 0, 0, 0);
+        border-radius: 0;
+        border: 0;
+
+        border-image: url("img/controls/entry.svg") 6;
+        font-size: $font-size-base;
+        padding: .3em .6em !important;
+        height: 2em;
+        width: $width;
+        font-weight: normal;
+        color: $text-primary;
+
+        StIcon {
+            color: $text-primary;
+            icon-size: 16px;
+
+            &.capslock-warning {
+                color: $text-warning !important;
+            }
+        }
+
+        &:indeterminate {
+            color: $text-disabled;
+        }
+    }
+
+    @else if $t==focus {
+        border-image: url("img/controls/entry-focused.svg") 6;
+        font-size: $font-size-base;
+        font-weight: bold;
+        padding: .3em .6em !important;
+        height: 2em;
+        width: $width;
+        color: $text-primary;
+        caret-color: $text-primary;
+        caret-size: 2px;
+        selected-color: $text-primary;
+        selection-background-color: $accent-primary;
+
+        StIcon {
+            color: $text-primary;
+        }
+    }
+
+    @else if $t==insensitive {
+        border-image: url("img/controls/entry-insensitive.svg") 6;
+        width: $width;
+        color: $text-disabled;
+
+        StIcon {
+            color: $text-disabled;
+        }
+    }
+
+    @else if $t==overview--normal {
+        border-image: url("img/overview/overview-dark-bg.svg") 7;
+        border-radius: 0;
+        font-size: $font-size-base;
+        padding: .3em .6em !important;
+        height: 2em;
+        width: $width;
+        color: $text-disabled;
+
+        StIcon {
+            icon-size: 16px;
+            color: $text-disabled;
+        }
+
+        &:hover StIcon {
+            color: $text-primary;
+        }
+
+        &:indeterminate {
+            color: $text-disabled;
+        }
+    }
+
+    @else if $t==overview--focus {
+        border-width: 0;
+        border-image: url("img/overview/overview-light-bg.svg") 7;
+        font-size: $font-size-base;
+        padding: .3em .6em !important;
+        height: 2em;
+        width: $width;
+        color: $text-primary;
+        caret-color: $text-primary;
+        caret-size: 2px;
+        selected-color: $text-primary;
+        selection-background-color: $accent-primary;
+        font-weight: bold;
+
+        StIcon {
+            color: $text-primary;
+
+            &.capslock-warning {
+                color: $text-primary !important;
+            }
+        }
+
+        &:hover StIcon {
+            color: $text-primary;
+        }
+    }
+}

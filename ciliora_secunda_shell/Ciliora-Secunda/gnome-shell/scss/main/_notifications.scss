@@ -1,0 +1,142 @@
+/* ======================================
+ * ! Notifications
+ * ====================================== */
+
+/*
+ * The url highlighter gets
+ * the opacity from the color property
+ * Tweak default $text-link color to FIX
+ */
+.url-highlighter {
+    link-color: $text-link;
+}
+
+.notification-banner {
+    color: $text-primary;
+    font-size: $font-size-base;
+    margin: 5px;
+    width: 34em;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    border: 0 solid transparent !important;
+
+    > StBoxLayout {
+        border-image: url("img/containers/popup.svg") 7;
+        padding: 3px 3px 0 3px;
+    }
+
+    &:hover, &:focus {
+        color: $text-primary;
+        background-color: transparent !important;
+
+        .message-content StIcon {
+            color: $text-danger;
+        }
+    }
+
+    StEntry {
+        margin: 0 10px 10px 10px;
+    }
+
+    .message-icon-bin {
+        padding: 1.1em 1.1em 1.3em 1.1em;
+    }
+
+    .message-icon-bin > StIcon {
+        color: $text-primary;
+        icon-size: 16px;
+        -st-icon-style: symbolic;
+    }
+
+    .message-content {
+        padding: 1.1em 1.1em 1.3em 0;
+    }
+
+    .notification-actions {
+        background-color: transparent;
+        padding: 0;
+        spacing: 0;
+    }
+
+    .notification-button {
+        @include btn-dialog-primary;
+        background-color: transparent !important;
+    }
+}
+
+.hotplug-notification-item {
+    @include btn-dialog-primary;
+    font-size: $font-size-base;
+    text-shadow: 0 0 rgba(0, 0, 0, 0) !important;
+    padding: 1em;
+
+    &-icon {
+        padding: 0 .4em 0 0;
+    }
+}
+
+.secondary-icon {
+    icon-size: 16px;
+}
+
+/* ! Chat Bubble */
+
+.chat-scrollview {
+    border: 1px;
+    padding: 0 6px;
+
+
+    StScrollBar {
+        padding: 0 6px;
+    }
+}
+
+.chat-body {
+    spacing: 5px;
+    padding: 0;
+}
+
+.chat-response {
+    margin: 5px;
+}
+
+.chat-log-message {
+    color: $text-secondary;
+}
+
+.chat-new-group {
+    padding-top: 1em;
+}
+
+.chat-received {
+    border-image: url("img/containers/bubble-right-blue.svg") 7 11 7 9;
+    padding: 1em 1.6em 1em 1em;
+    margin-left: 2em;
+    font-weight: bold;
+    color: $text-primary;
+    link-color: $text-primary !important;
+
+    &:rtl { padding: 1em 1em 1em 1.6em; }
+}
+
+.chat-sent {
+    border-image: url("img/containers/bubble-left-light-bg.svg") 11 7 9 7;
+    padding: 1em 1em 1em 1.6em;
+    margin-left: 0;
+    color: $text-primary;
+    font-weight: bold;
+
+    &:rtl { padding: 1em 1.6em 1em 1em; }
+}
+
+.chat-meta-message {
+    padding-left: 4px;
+    font-size: $font-size-base;
+    font-weight: bold;
+    color: $text-secondary;
+
+    &:rtl {
+        padding-left: 0;
+        padding-right: 4px;
+    }
+}

@@ -1,0 +1,26 @@
+/* ======================================
+ * ! Extension dialog
+ * ====================================== */
+
+.extension-dialog {
+    .headline {
+        font-size: $font-size-lg;
+    }
+
+    StIcon {
+        icon-size: 32px;
+        @include size(32px);
+    }
+}
+
+.extension-dialog .modal-dialog-linked-button {
+    @include btn-dialog('m', $text-primary, 'primary', $text-link);
+
+    &:first-child {
+        @include btn-dialog(f, $text-primary, 'primary', $text-link);
+    }
+
+    &:last-child {
+        @include btn-dialog(l, $text-primary, 'primary', $text-info);
+    }
+}

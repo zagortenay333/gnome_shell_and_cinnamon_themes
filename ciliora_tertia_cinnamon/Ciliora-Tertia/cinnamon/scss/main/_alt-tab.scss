@@ -1,0 +1,47 @@
+/* ======================================
+ * ! Alt Tab
+ * ====================================== */
+/*
+ * This styles the normal alt-tab popup
+ *
+ * See also window-list module for a similar selector
+ */
+#uiGroup > #altTabPopup {
+    padding: 0;
+    spacing: 4px;
+
+    .switcher-list {
+        border-image: url("img/containers/popup-outside.svg") 7;
+        color: $text-primary;
+        padding: 3px;
+        font-size: $font-size-lg;
+        font-weight: bold;
+
+        .item-box {
+            border-image: url("img/containers/popup-inside.svg") 7;
+            padding: 10px;
+
+            &:selected {
+                border-image: url("img/containers/hover.svg") 7;
+                color: $text-primary-invert;
+            }
+
+            StLabel { padding-top: .4em; }
+        }
+    }
+}
+
+/*
+ * This styles the window name box when alt-tab is
+ * in 'coverflow' or 'timeline' modes
+ */
+#uiGroup > StWidget > .switcher-list {
+    border-image: url("img/expo_scale/expo-bg__dark.svg") 7;
+    color: $text-primary-invert;
+}
+
+.switcher-list-item-container { spacing: 0; }
+
+.thumbnail { width: 256px; }
+
+.alt-tab-app {}

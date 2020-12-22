@@ -1,0 +1,12 @@
+/* ======================================
+ * ! Entries
+ * ====================================== */
+
+StEntry,
+.popup-menu .search-entry {
+    @include entry(normal);
+
+    &:focus { @include entry(focus); }
+
+    &:insensitive { @include entry(insensitive); }
+}

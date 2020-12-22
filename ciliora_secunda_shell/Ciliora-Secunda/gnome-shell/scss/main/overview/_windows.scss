@@ -1,0 +1,51 @@
+/* ======================================
+ * ! Overview Windows
+ * ====================================== */
+.window-picker {
+    -horizontal-spacing: 33px;
+    -vertical-spacing: 33px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 48px;
+
+    &.external-monitor {
+        padding: 32px;
+    }
+}
+
+.window-clone-border {
+    border: 0;
+    box-shadow: 0 0 transparent;
+}
+
+.window-caption {
+    border-image: url("img/overview/overview-dark-bg.svg") 7;
+    spacing: 0;
+    padding: 6px 10px;
+    -shell-caption-spacing: 10px;
+    background-color: transparent;
+    border-radius: 0;
+    color: $text-primary;
+    font-weight: bold;
+    font-size: $font-size-base;
+}
+
+.window-close {
+    background-image: url("img/controls/close.svg");
+    background-size: 41px;
+    @include size(41px);
+    -shell-close-overlap: 24px;
+    -st-background-image-shadow: 0 0 rgba(0, 0, 0, 0) !important;
+
+    &:hover {
+        background-image: url("img/controls/close-hover.svg");
+    }
+
+    &:active {
+        background-image: url("img/controls/close-pressed.svg");
+    }
+
+    &:rtl {
+       -st-background-image-shadow: 0 0 rgba(0, 0, 0, 0) !important;
+    }
+}

@@ -1,0 +1,53 @@
+/* ======================================
+ * ! OSD
+ * ====================================== */
+
+.info-osd {
+    border-image: url("img/expo_scale/expo-bg__dark.svg") 7;
+    spacing: .4em;
+    padding: .7em;
+    color: $text-primary-invert;
+    text-align: center;
+    font-weight: bold;
+    font-size: $font-size-xl;
+}
+
+.osd-window {
+    border-image: url("img/expo_scale/expo-bg__dark.svg") 7;
+    padding: 12px;
+    spacing: 1em;
+    color: $text-primary-invert;
+
+    .level {
+        height: .5em;
+        color: $accent-primary;
+    }
+}
+
+/* Appears when switching workspaces */
+.workspace-osd {
+    border-image: url("img/expo_scale/expo-bg__dark.svg") 7;
+    padding: .7em;
+    color: $text-primary-invert;
+    font-weight: bold;
+    font-size: $font-size-xxl;
+}
+
+/* Appears when selecting with looking glass*/
+#LookingGlassDialog {
+    border-image: url("img/expo_scale/expo-bg__dark.svg") 7;
+    padding: 1.4em;
+    spacing: .4em;
+    color: $text-primary-invert;
+
+    StLabel:first-child  {
+        font-weight: bold;
+        font-size: $font-size-base;
+    }
+
+    StLabel:last-child  {
+        padding-top: .4em;
+        color: $text-secondary-invert;
+        font-size: $font-size-base;
+    }
+}

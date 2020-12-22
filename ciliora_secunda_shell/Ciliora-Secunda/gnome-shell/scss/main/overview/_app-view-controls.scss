@@ -1,0 +1,31 @@
+/* ======================================
+ * ! App View Controls
+ * ====================================== */
+
+.app-view-controls {
+    padding-bottom: 24px;
+    spacing: 0;
+}
+
+.app-view-control {
+    box-shadow: 0 0 transparent;
+    border-image: url("img/overview/overview-dark-bg.svg") 7;
+    padding: 6px 12px;
+    color: $text-secondary;
+
+    &:hover, &:focus, &:focus:active, &:checked {
+        border-image: url("img/overview/overview-light-bg.svg") 7;
+        color: $text-primary;
+    }
+
+    &:last-child:checked {
+        border-image: url("img/overview/overview-highlight-bg-last.svg") 7;
+        color: $text-primary;
+    }
+
+    &:first-child:checked {
+        border-image: url("img/overview/overview-highlight-bg-first.svg") 7;
+        color: $text-primary;
+    }
+
+}

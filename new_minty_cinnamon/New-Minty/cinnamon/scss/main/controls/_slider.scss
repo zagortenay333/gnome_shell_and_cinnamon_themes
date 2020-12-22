@@ -1,0 +1,20 @@
+/* ======================================
+ * ! Slider
+ * ====================================== */
+
+.slider {
+    height: 16px;
+    min-width: 15em;
+    -slider-height: 0;
+    -slider-background-color: rgba(0, 0, 0, 0);
+    -slider-border-color: rgba(0, 0, 0, 0);
+    -slider-active-background-color: rgba(0, 0, 0, 0);
+    -slider-active-border-color: $accent-primary;
+    -slider-border-width: 2px;
+    -slider-handle-radius: 4px;
+    border-image: url("img/controls/slider.svg") 3 3 0 0;
+
+    .popup-menu-item:active & {
+        -slider-active-border-color: saturate(darken($accent-primary, 12%), 14%);
+    }
+}

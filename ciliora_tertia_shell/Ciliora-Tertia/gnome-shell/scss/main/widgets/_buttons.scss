@@ -1,0 +1,7 @@
+/* ======================================
+ *  ! Button (global selector)
+ * ====================================== */
+.button {
+    @include btn-primary;
+    @include btn-width(wide);
+}

@@ -1,0 +1,125 @@
+/* ======================================
+ * ! Panel
+ * ====================================== */
+
+#panel {
+    background-gradient-direction: none !important;
+    background-color: transparent !important;
+    border-bottom-width: 0 !important;
+
+    border-image: url("img/panel/panel-top.svg") 4;
+    height: 2em;
+    font-weight: bold;
+
+    &.unlock-screen,
+    &.lock-screen {
+        border-image: url("img/panel/panel-top.svg") 4;
+    }
+
+    &Left, &Center, &Right {
+        spacing: 0;
+    }
+
+    &Activities {
+        color: rgba(0, 0, 0, 0) !important;
+        font-size: 0 !important;
+
+        background-image: url("img/menu-icons/hamburger.svg");
+        @include size(16px);
+        padding: 0 9px !important;
+
+        &:overview {
+            background-image: url("img/menu-icons/hamburger.svg");
+        }
+    }
+
+    .panel-button {
+        text-shadow: 0 0 transparent !important;
+        transition-duration: 0ms;
+        -natural-hpadding: 8px;
+        -minimum-hpadding: 6px;
+        font-weight: bold;
+        color: $text-primary;
+
+        &:hover {
+            border-image: url("img/overview/overview-light-bg__dash--top.svg") 6;
+        }
+
+        &:active, &:overview, &:focus, &:checked {
+            background-gradient-direction: none !important;
+            background-color: transparent !important;
+            box-shadow: inset 0 0 transparent !important;
+
+            border-image: url("img/overview/overview-highlight-bg__dash--top.svg") 6;
+        }
+    }
+
+    .panel-status-indicators-box,
+    .panel-status-menu-box {
+        spacing: 0;
+    }
+
+    .screencast-indicator {
+        color: $accent-danger;
+    }
+
+    .panel-corner {
+        -panel-corner-radius: 0;
+        -panel-corner-background-color: rgba(0, 0, 0, 0);
+        -panel-corner-border-width: 0;
+        -panel-corner-border-color: transparent;
+
+        &:active, &:overview, &:focus {
+            -panel-corner-border-color: rgba(0, 0, 0, 0);
+        }
+
+        &.lock-screen, &.login-screen, &.unlock-screen {
+            -panel-corner-radius: 0;
+            -panel-corner-background-color: transparent;
+            -panel-corner-border-color: transparent;
+        }
+    }
+
+    .system-status-icon {
+        icon-size: 16px !important;
+        padding: 0 6px !important;
+        icon-shadow: rgba(0, 0, 0, 0) 0 0 !important;
+    }
+
+    .app-menu-icon {
+        width: 0;
+        -st-icon-style: symbolic;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .popup-menu-arrow {
+        width: 0;
+    }
+}
+
+#appMenu {
+    spinner-image: url("img/misc/process-working.svg");
+    padding: 0 5px;
+
+    // this targets the spinner image
+    StBin:last-child {
+        margin: 0 0 0 3px;
+    }
+}
+
+/* ! Notification indicator */
+.clock-display {
+    > * > *:last-child {
+        color: transparent !important;
+
+        background-image: url("img/panel/notification-indicator.svg");
+        @include size(6px);
+        margin-left: .5em;
+
+    }
+
+    &:hover > * > *:last-child {
+        background-image: url("img/panel/notification-indicator--hover.svg");
+    }
+}

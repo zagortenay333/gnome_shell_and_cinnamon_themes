@@ -1,0 +1,94 @@
+/* ======================================
+ * ! Network dialog
+ * ====================================== */
+
+.nm-dialog {
+    min-height: 350px;
+    max-height: 500px;
+    min-width: 350px;
+    max-width: 500px;
+
+    &-content {
+        spacing: 20px;
+        padding: 24px 24px 17px 24px !important
+    }
+
+    &-header-hbox {
+        spacing: 10px;
+    }
+
+    &-header {
+        font-weight: bold;
+        font-size: $font-size-lg;
+        color: $text-primary;
+    }
+
+    &-subheader {
+        margin-top: .4em;
+    }
+
+    &-header-icon {
+        icon-size: 32px;
+        color: $text-primary;
+    }
+
+    &-airplane-box {
+        spacing: 12px;
+        padding: 14px;
+    }
+
+    &-airplane-headline {
+        font-weight: bold;
+        font-size: $font-size-lg;
+        color: $text-primary;
+        text-align: center;
+    }
+
+    &-airplane-text {
+        color: $text-primary;
+        padding-bottom: 20px;
+    }
+
+    &-scroll-view {
+        border: 0 transparent !important;
+        border-image: url("img/containers/light-bg.svg") 6;
+        padding: 8px;
+        padding-right: 0;
+
+        StScrollBar { padding: 0 8px; }
+    }
+
+    &-item {
+        font-size: $font-size-lg;
+        font-weight: bold;
+        padding: 14px;
+        spacing: 20px;
+    }
+
+    &-item:selected {
+        background-color: transparent !important;
+        color: $text-primary-invert;
+        border-image: url("img/containers/hover.svg") 6;
+
+        .nm-dialog-icon { color: $text-primary-invert; }
+    }
+
+    &-icons {
+        spacing: .5em;
+    }
+
+    &-icon {
+        icon-size: 16px;
+        color: $text-secondary;
+    }
+}
+
+.no-networks-label {
+    color: $text-primary;
+    font-size: $font-size-lg;
+    font-weight: bold;
+}
+
+.no-networks-box {
+    spacing: 12px;
+}

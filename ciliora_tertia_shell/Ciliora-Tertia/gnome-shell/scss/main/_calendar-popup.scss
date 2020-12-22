@@ -1,0 +1,563 @@
+/* ======================================
+ * ! Calendar
+ * ====================================== */
+
+#calendarArea {
+    padding: 0;
+    max-height: 700px;
+}
+
+.calendar {
+    margin: 0 15px .3em 15px;
+}
+
+.datemenu-calendar-column {
+    spacing: 0;
+    margin: 0;
+    padding: .7em 0;
+    border: 0 !important;
+}
+
+
+/* ======================================
+ * ! Day & Date
+ * ====================================== */
+
+.datemenu-today-button {
+    margin: 0 6px 2px 6px;
+    padding: 0 12px .7em 12px;
+
+    &:hover, &:focus, &:active {
+        background-color: transparent;
+
+        .day-label, .date-label {
+            color: $text-link;
+            text-decoration: underline;
+        }
+    }
+
+    .day-label {
+        padding-bottom: .2em;
+        font-size: $font-size-lg;
+        color: $text-secondary;
+    }
+
+    .date-label {
+        text-align: center !important;
+        font-size: $font-size-xl;
+        color: $text-primary;
+    }
+}
+
+
+/* ======================================
+ * ! World Clocks
+ * ====================================== */
+
+.datemenu-displays-box {
+    margin: 0 18px;
+    spacing: .5em;
+}
+
+.datemenu-displays-section {
+    padding: 0;
+    margin: .2em 0 0 0;
+
+    StScrollBar {
+        padding: 0;
+    }
+}
+
+.world-clocks-button {
+    color: $text-primary;
+    border-radius: 0;
+    padding: 0;
+
+    &:hover, &:focus, &:active {
+        background-color: transparent !important;
+
+        .world-clocks-header {
+            color: $text-link;
+            text-decoration: underline;
+        }
+    }
+}
+
+.world-clocks-header {
+    color: $text-primary;
+    font-weight: bold;
+    margin-bottom: .3em;
+}
+
+.world-clocks-grid {
+    spacing-rows: .2em;
+    padding: .4em 0;
+    font-size: $font-size-base;
+}
+
+.world-clocks-city {
+    font-size: $font-size-base;
+    margin: 0;
+}
+
+.world-clocks-time {
+    font-size: $font-size-base;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* ======================================
+ * ! Weather section
+ * ====================================== */
+.weather-box {
+    spacing: .3em;
+}
+
+.weather-button {
+    color: $text-primary;
+    border-radius: 0;
+    padding: 0;
+
+    &:hover, &:focus, &:active {
+        background-color: transparent !important;
+
+        .weather-header {
+            color: $text-link;
+            text-decoration: underline;
+        }
+    }
+
+    .weather-header {
+        color: $text-primary;
+        font-weight: bold;
+    }
+}
+
+.weather-conditions {
+    padding: 0;
+    font-size: $font-size-base;
+}
+
+
+/* ======================================
+ * ! Change Month Bar
+ * ====================================== */
+
+/* the container of the bar */
+.calendar {
+    > StBoxLayout:first-child {
+        border-image: url("img/containers/dark-bg.svg") 7;
+        padding: 0;
+        margin: 1px;
+    }
+}
+
+.calendar-month-label {
+    color: $text-secondary;
+    font-weight: bold;
+    padding: .6em;
+
+    &:focus  {
+        color: $text-link;
+    }
+}
+
+.pager-button {
+    color: $text-primary;
+    background-color: transparent;
+    width: 32px;
+    border-radius: 0 !important;
+    padding: 0;
+
+    &:first-child {
+        border-image: url("img/misc/change-month-btn-f.svg") 7;
+
+        &:hover, &:focus, &:active {
+            border-image: url("img/misc/change-month-btn-f-hover.svg") 7;
+        }
+    }
+
+    &:last-child {
+        border-image: url("img/misc/change-month-btn-l.svg") 7;
+
+        &:hover, &:focus, &:active {
+            border-image: url("img/misc/change-month-btn-l-hover.svg") 7;
+        }
+    }
+
+    &.calendar-change-month {
+        &-back, &-forward:rtl {
+            background-image: url("img/controls/calendar-arrow-left.svg");
+
+            &:hover, &:focus {
+                background-image: url("img/controls/calendar-arrow-left-hover.svg");
+            }
+        }
+
+        &-forward, &-back:rtl {
+            background-image: url("img/controls/calendar-arrow-right.svg");
+
+            &:hover, &:focus {
+                background-image: url("img/controls/calendar-arrow-right-hover.svg");
+            }
+        }
+    }
+}
+
+/* ======================================
+ * ! Calendar days
+ * ====================================== */
+
+.calendar-day {/*!*/}
+.calendar-day-top {/*!*/}
+.calendar-day-left {/*!*/}
+
+.calendar-day-base {
+    font-size: $font-size-base;
+    font-weight: bold;
+    text-align: center;
+    margin: 1px;
+    padding-left: 2px;
+    @include size(2.4em, 2.6em);
+}
+
+.calendar-day-heading {
+    font-size: inherit;
+    color: $text-primary;
+    margin-top: 1em;
+    height: 2em;
+
+    &:focus {
+        background-color: transparent;
+        color: $text-link;
+    }
+}
+
+.calendar-work-day {
+    border-image: url("img/misc/calendar-work-day.svg") 7;
+    border: none;
+    color: $text-primary;
+
+    &:hover, &:focus {
+        border-image: url("img/misc/calendar-work-day-hover.svg") 7;
+    }
+
+    &:selected, &:active {
+        border-image: url("img/containers/hover.svg") 7;
+        color: $text-primary-invert;
+    }
+
+    &.calendar-day-with-events {
+        border-image: url("img/misc/calendar-work-day-events.svg") 7;
+        background-image: none !important;
+        color: $text-info;
+
+        &:hover, &:focus, &:active, &:selected {
+            border-image: url("img/containers/hover-violet.svg") 7;
+            color: $text-primary-invert;
+        }
+    }
+
+    &.calendar-today {
+        border-image: url("img/misc/calendar-work-day-today.svg") 7;
+        color: $text-link;
+
+        &:hover, &:focus, &:active, &:selected {
+            border-image: url("img/containers/hover.svg") 7;
+            color: $text-primary-invert;
+        }
+    }
+
+        &.calendar-day-with-events.calendar-today {
+        border-image: url("img/misc/calendar-work-day-today-events.svg") 4 9 7 7;
+        color: $text-link;
+
+        &:hover, &:focus, &:active, &:selected {
+            border-image: url("img/containers/hover.svg") 7;
+            color: $text-primary-invert;
+        }
+    }
+}
+
+.calendar-nonwork-day {
+    border-image: url("img/misc/calendar-nonwork-day.svg") 7;
+    border: none;
+    color: $text-secondary;
+
+    &:hover, &:focus {
+        border-image: url("img/misc/calendar-nonwork-day-hover.svg") 7;
+        color: $text-primary;
+    }
+
+    &:selected, &:active {
+        border-image: url("img/containers/hover.svg") 7;
+        color: $text-primary-invert;
+    }
+
+    &.calendar-day-with-events {
+        border-image: url("img/misc/calendar-nonwork-day-events.svg") 7;
+        background-image: none !important;
+        color: $text-info;
+
+        &:hover, &:focus, &:active, &:selected {
+            border-image: url("img/containers/hover-violet.svg") 7;
+            color: $text-primary-invert;
+        }
+    }
+
+    &.calendar-today {
+        border-image: url("img/misc/calendar-nonwork-day-today.svg") 7;
+        color: $text-link;
+
+        &:hover, &:focus, &:active, &:selected {
+            border-image: url("img/containers/hover.svg") 7;
+            color: $text-primary-invert;
+        }
+    }
+
+    &.calendar-day-with-events.calendar-today {
+        border-image: url("img/misc/calendar-nonwork-day-today-events.svg") 4 9 7 7;
+        color: $text-link;
+
+        &:hover, &:focus, &:active, &:selected {
+            border-image: url("img/containers/hover.svg") 7;
+            color: $text-primary-invert;
+        }
+    }
+}
+
+.calendar-other-month-day {
+    border-image: url("img/misc/calendar-other-month-day.svg") 7;
+    color: $text-disabled;
+    font-weight: normal;
+
+    &:hover, &:focus {
+        font-weight: bold;
+        color: $text-primary;
+    }
+
+    &:selected, &:active {
+        border-image: url("img/containers/hover.svg") 7;
+        color: $text-primary-invert;
+    }
+
+    &.calendar-day-with-events {
+        border-image: url("img/misc/calendar-other-month-day-events.svg") 7;
+        background-image: none !important;
+        color: $text-disabled;
+
+        &:hover, &:focus, &:active, &:selected {
+            border-image: url("img/containers/hover-violet.svg") 7;
+            color: $text-primary-invert;
+        }
+    }
+
+    &.calendar-today {
+        border-image: url("img/misc/calendar-other-month-day-today.svg") 7;
+        color: $text-disabled;
+
+        &:hover, &:focus, &:active, &:selected {
+            border-image: url("img/hover/hover.svg") 7;
+            color: $text-primary-invert;
+        }
+    }
+}
+
+.calendar-day-with-events {
+    &:hover, &:focus {
+        border-image: none;
+        background-image: none !important;
+        color: $text-primary-invert;
+    }
+}
+
+.calendar-today {
+    &:hover, &:focus {
+        border-image: url("img/misc/calendar-hover.svg") 7;
+        color: $text-primary-invert;
+    }
+}
+
+.calendar-week-number {
+    margin: 1px !important;
+    background-color: rgba(#000, 0) !important;
+
+    color: $text-secondary;
+    font-size: inherit;
+    font-weight: normal;
+    @include size(2.4em, 1.4em);
+    padding: .7em .4em 0 0;
+}
+
+/* ======================================
+ * ! Message List
+ * ====================================== */
+
+.message-list {
+    width: 34em;
+    margin: 0;
+
+    &-placeholder {
+        StIcon { @include size(0); }
+
+        StLabel {
+            color: $text-disabled;
+            font-size: $font-size-base;
+            font-weight: bold;
+        }
+    }
+
+    &-sections {
+        spacing: 1.5em;
+        margin: .6em 15px 1em 15px;
+    }
+
+    &-section,
+    &-section-list {
+        spacing: 0.7em;
+    }
+
+    &-section-list:ltr, &-section-list:rtl  {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &-clear-button.button {
+        padding: .8em 1.2em !important;
+    }
+
+    StScrollView StScrollBar {
+
+        padding: 8px 0 12px 0;
+    }
+}
+
+.events-section-title {
+    padding: .1em 0 0 .2em;
+    font-weight: bold;
+    color: $text-secondary;
+    color: $text-secondary;
+
+    &:hover, &:focus, &:active {
+        background-color: transparent !important;
+        color: $text-link;
+        text-decoration: underline;
+
+    }
+}
+
+
+/* ======================================
+ * ! Message
+ * ====================================== */
+
+.message {
+    background-color: transparent !important;
+    border-radius: 0;
+    margin: 0;
+    padding: .2em .2em .2em .6em;
+
+    &:hover {
+        background-color: transparent !important;
+    }
+
+    &-content {
+        color: $text-primary;
+        spacing: .4em;
+        padding: .6em;
+
+        // the title icon (close, chat-status, etc..)
+        > *:first-child StIcon {
+            color: $text-danger;
+            @include size(16px);
+        }
+    }
+
+    &-icon-bin {
+        padding: 8px 0 8px 8px;
+        &:rtl { padding: 8px 8px 8px 0; }
+
+        > StIcon {
+            icon-size: 16px;
+            color: $text-primary;
+        }
+    }
+
+    &-title {
+        color: $text-primary;
+        font-weight: bold;
+        font-size: $font-size-base;
+        min-height: 18px; // prevent jitter when hovering notif
+    }
+
+    &-body {/*!*/}
+
+    &-secondary-bin {/*!*/}
+
+    .event-time {
+        color: $text-secondary;
+        font-size: $font-size-base;
+        min-height: 18px; // prevent jitter when hovering notif
+    }
+}
+
+/* normal notification */
+.message-list-section .message {
+    border-image: url("img/containers/light-bg-marked-blue.svg") 7;
+
+    &:focus {
+        border-image: url("img/containers/hover.svg") 7;
+        * { color: $text-primary-invert; }
+    }
+}
+
+/* events notification */
+.message-list-section:last-child .message {
+    border-image: url("img/containers/light-bg-marked-violet.svg") 7;
+
+    &:focus {
+        border-image: url("img/containers/hover-violet.svg") 7;
+        * { color: $text-primary-invert; }
+    }
+}
+
+/* media notification */
+.message-list-section:first-child .message {
+    border-image: url("img/containers/light-bg-marked-green.svg") 7;
+
+    .message-media-control {
+        padding: 6px;
+        color: $text-primary;
+
+        &:hover  { color: $text-success; }
+        &:insensitive  { color: $text-disabled; }
+
+        &:last-child:ltr { padding-right: 18px; }
+        &:last-child:rtl { padding-left: 18px; }
+    }
+
+    .media-message-cover-icon {
+        icon-size: 16px !important;
+
+        &.fallback {
+            background-color: rgba(0, 0, 0, 0);
+            border-radius: 0;
+            padding: 0;
+            border: 0;
+            color: $text-primary;
+        }
+    }
+
+    &:focus {
+        background-color: transparent !important;
+        border-image: url("img/containers/hover-green.svg") 7;
+
+        * { color: $text-primary-invert; }
+
+        .media-message-cover-icon { color: $text-primary-invert; }
+
+        .message-media-control:hover StIcon { color: $text-primary; }
+        .message-media-control:insensitive StIcon { color: $text-disabled-invert; }
+    }
+}

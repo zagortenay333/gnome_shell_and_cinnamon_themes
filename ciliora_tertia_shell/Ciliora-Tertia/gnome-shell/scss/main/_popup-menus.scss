@@ -1,0 +1,111 @@
+/* ======================================
+ * ! Popup Menus
+ * ====================================== */
+
+.popup-menu {
+    border-image: url("img/containers/popup-outside.svg") 6;
+    padding: 3px;
+    min-width: 10em;
+
+    &-boxpointer {
+        -arrow-border-radius: 0;
+        -arrow-background-color: rgba(0, 0, 0, 0);
+        -arrow-border-width: 0;
+        -arrow-border-color: rgba(0, 0, 0, 0);
+        -arrow-base: 12px;
+        -arrow-rise: 0;
+        -arrow-box-shadow: 0 0 rgba(0, 0, 0, 0);
+    }
+
+    &-content {
+        border-image: url("img/containers/popup-inside.svg") 7;
+        padding: .7em 0;
+        color: $text-primary;
+    }
+
+    &-ornament {
+        text-align: center;
+        width: 1em;
+        color: $text-link;
+    }
+
+    &-arrow {
+        @include size(14px);
+        padding: 0;
+        color: $text-primary;
+    }
+
+    &-icon {
+        icon-size: 16px !important;
+        color: $text-primary !important;
+    }
+
+    &-item {
+        spacing: 0;
+
+        // ugly fix for the ornament spacing
+        &:ltr {
+            padding: .5em 1em .5em 0;
+            > * { margin: 0 .6em 0 0; }
+            .popup-menu-ornament { margin: 0 .1em 0 .3em !important; }
+        }
+
+        &:rtl {
+            padding: .5em 0 .5em 1em;
+            > * { margin: 0 0 0 .6em; }
+            .popup-menu-ornament { margin: 0 .2em 0 .1em !important; }
+        }
+
+        &:checked {
+            background-color: rgba(0, 0, 0, 0);
+            box-shadow: 0 0 rgba(0, 0, 0, 0);
+            font-weight: normal;
+        }
+
+        &:active,
+        &.selected {
+            border-image: url("img/containers/hover.svg") 7;
+            color: $text-primary-invert;
+            * { color: $text-primary-invert !important; }
+        }
+
+        &:insensitive {
+            font-weight: normal;
+            color: $text-disabled;
+        }
+    }
+
+    .popup-inactive-menu-item {
+        color: $text-primary;
+
+        &:insensitive { color: $text-disabled; }
+    }
+
+    .popup-status-menu-item {
+        color: $text-secondary;
+    }
+
+    &.panel-menu {
+        -boxpointer-gap: 0;
+        margin: 4px;
+    }
+
+    &.background-menu {
+        -boxpointer-gap: 0;
+        -arrow-rise: 0;
+    }
+}
+
+.popup-sub-menu {
+    border-image: url("img/containers/submenu-bg.svg") 7;
+    box-shadow: 0 0 rgba(0, 0, 0, 0);
+    padding: 12px 0;
+}
+
+.popup-separator-menu-item {
+    background-image: url("img/misc/separator.svg");
+    background-repeat: repeat;
+    height: 13px;
+    margin: 0;
+    border: 0 solid transparent;
+}

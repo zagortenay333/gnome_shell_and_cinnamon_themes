@@ -1,0 +1,224 @@
+/* ======================================
+ * ! Looking Glass
+ * ====================================== */
+
+/*
+ * The picker dialog has id "#LookingGlassDialog".
+ * The lg dialog has the same id and the class ".lg-dialog".
+ * Use the id to target the picker dialog and the class
+ * to target the lg-dialog.
+ */
+#LookingGlassDialog {
+    border-image: url("img/containers/popup-outside.svg") 7;
+    font-weight: bold;
+    font-size: $font-size-lg;
+    padding: 16px;
+    color: $text-primary;
+}
+
+.lg-dialog {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: 0 transparent !important;
+    border-radius: 0;
+
+    border-image: url("img/containers/popup.svg") 7 !important;
+    font-weight: normal !important;
+    font-size: $font-size-base !important;
+    spacing: 4px;
+    margin: 7px;
+    padding: 16px 11px 16px 22px !important;
+    color: $text-primary;
+
+    * {
+        font-family: $font-family;
+        transition-duration: 0ms;
+    }
+
+    #Toolbar {
+        border: 0 transparent !important;
+        border-radius: 0 !important;
+        padding: 0 14px 4px 8px;
+
+        StIcon {
+            margin: 0 10px;
+            &:first-child { margin-left: 0; }
+            &:last-child { margin-right: 0; }
+        }
+
+        .labels {
+            spacing: 0;
+        }
+
+        .notebook-tab {
+            @include btn-linked-primary;
+
+            padding: 0;
+            -natural-hpadding: 12px;
+            -minimum-hpadding: 6px;
+            StButton { padding: 10px 14px; }
+        }
+    }
+
+    StScrollBar {
+        padding: 0 0 4px 2px;
+    }
+
+    #EvalBox {
+        color: $text-primary;
+        padding: 0 4px 4px 0;
+        spacing: 8px;
+    }
+
+    #ResultsArea {
+        color: $text-primary;
+        padding: 0 0 14px 0;
+        spacing: 8px;
+
+        > StBoxLayout {
+            padding: 10px 10px 10px 14px;
+            border-image: url("img/containers/light-bg-marked-blue.svg") 10;
+            font-size: $font-size-base;
+            spacing: 1em;
+        }
+    }
+
+    #Windows {
+        color: $text-primary;
+        padding: 0 4px 4px 0;
+        spacing: 8px;
+
+        > StBoxLayout {
+            padding: 10px 10px 10px 14px;
+            border-image: url("img/containers/light-bg-marked-green.svg") 10;
+            font-size: $font-size-base;
+            spacing: 1em;
+
+            StButton:first-child {
+                font-size: $font-size-xl;
+            }
+        }
+    }
+
+    #lookingGlassExtensions {
+        padding: 0 4px 4px 0;
+
+        .lg-extensions-list {
+            padding: 0;
+            spacing: 8px;
+        }
+
+        .lg-extensions-none {
+            font-size: $font-size-xl;
+            color: $text-secondary;
+        }
+
+        .lg-extension {
+            border: 0  transparent !important;
+            border-radius: 0 !important;
+            border-image: url("img/containers/light-bg-marked-violet.svg") 7;
+            padding: 10px 10px 10px 14px;
+            color: $text-primary;
+            spacing: .8em;
+
+            &-name {
+                color: $text-primary;
+                font-size: $font-size-xl;
+                font-weight: bold;
+                padding-bottom: 2px;
+            }
+
+            &-description {
+                font-size: $font-size-base;
+            }
+
+            &-meta {
+                spacing: 6px;
+                font-size: $font-size-base;
+            }
+
+            &-state {
+                font-weight: bold;
+                color: $text-info;
+            }
+        }
+    }
+
+    #EntryArea {
+        StLabel {
+            font-size: 0;
+            width: 0;
+        }
+
+        StEntry {
+            selection-background-color: $accent-primary;
+            selected-color: $text-primary;
+        }
+    }
+
+    #LookingGlassAutoCompletionText {
+        padding: 0 1em;
+    }
+}
+
+/*
+ * This box has no id's or classes and is
+ * the direct child of the global container("#uiGroup").
+ * A child combinator is the only way to target it.
+ */
+#uiGroup {
+    > StScrollView {
+        border-image: url("img/containers/popup.svg") 7;
+        padding: 5px;
+
+        StScrollBar {
+            padding: 17px 6px 17px 0;
+        }
+    }
+}
+
+#LookingGlassPropertyInspector {
+    border-image: none !important;
+    background: transparent;
+    border: 0 transparent;
+    border-radius: 0;
+
+    color: $text-primary;
+    spacing: 0;
+    padding: 10px 0 10px 10px !important;
+
+    > StBoxLayout {
+        border-image: url("img/containers/light-bg--top__vertical.svg") 10;
+        padding: 12px 14px;
+
+        &:first-child {
+            border-image: url("img/containers/light-bg.svg") 10;
+            margin: 0 0 10px 0;
+        }
+
+        &:last-child {
+            border-image: url("img/containers/light-bg--bottom__vertical.svg") 10;
+        }
+    }
+
+    .window-close {
+        background-image: url("img/controls/close-simple.svg");
+        background-size: 24px;
+        @include size(24px);
+
+        &:hover {
+            background-image: url("img/controls/close-simple-hover.svg");
+        }
+    }
+
+    .lg-obj-inspector-title {
+        color: $text-primary;
+        font-size: $font-size-lg;
+        font-weight: bold;
+        spacing: 4px;
+    }
+
+    .lg-obj-inspector-button {
+        @include btn-primary;
+        @include btn-width(small);
+    }
+}

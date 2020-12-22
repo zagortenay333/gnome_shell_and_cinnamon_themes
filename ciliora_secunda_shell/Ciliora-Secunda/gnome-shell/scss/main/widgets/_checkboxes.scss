@@ -1,0 +1,31 @@
+/* ======================================
+ * ! Checkboxes
+ * ====================================== */
+
+.check-box {
+    StBoxLayout {
+        spacing: .4em;
+        min-height: 17px;
+    }
+
+    StLabel {
+        padding-top: .1em;
+    }
+
+    StBin {
+        @include size(17px);
+        background-image: url("img/controls/check-box.svg");
+    }
+
+    &:focus StBin {
+        background-image: url("img/controls/check-box-focused.svg");
+    }
+
+    &:checked StBin {
+        background-image: url("img/controls/check-box-checked.svg");
+    }
+
+    &:focus:checked StBin {
+        background-image: url("img/controls/check-box-checked-focused.svg");
+    }
+}

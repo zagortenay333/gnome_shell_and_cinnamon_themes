@@ -1,0 +1,698 @@
+/* ======================================
+ * ! Timepp applet
+ * ====================================== */
+.timepp-custom-css-root {
+  -timepp-project-color: #6bd7a0 !important;
+  -timepp-context-color: #b48cff !important;
+  -timepp-link-color: #71adf8 !important;
+  -timepp-due-date-color: #ff4e6a !important;
+  -timepp-rec-date-color: #ffb34f !important;
+  -timepp-defer-date-color: #b48cff !important;
+}
+
+.timepp-panel-box .panel-button {
+  margin-right: 0 !important;
+}
+
+.timepp-panel-box .panel-button-content {
+  padding: 0 9px !important;
+}
+
+.timepp-panel-box .on {
+  border-image: url("img/panel/active.svg") 4;
+}
+
+.timepp-panel-box .on StLabel, .timepp-panel-box .on StIcon {
+  color: #fff !important;
+}
+
+.timepp-panel-box .on:hover, .timepp-panel-box .on:checked {
+  border-image: url("img/panel/active-hover.svg") 4;
+}
+
+.timepp-panel-box .on.alarm-panel-item {
+  border-image: none;
+}
+
+.timepp-panel-box .on.alarm-panel-item:hover, .timepp-panel-box .on.alarm-panel-item:checked {
+  border-image: url("img/overview/overview-light-bg__dash--top.svg") 4;
+}
+
+.timepp-panel-box .done StLabel, .timepp-panel-box .done StIcon {
+  color: #38ae72 !important;
+}
+
+.timepp-menu .timepp-menu-item {
+  padding: .5em 1.6em !important;
+}
+
+.timepp-menu .radiobutton StBoxLayout {
+  spacing: .4em;
+  min-height: 20px;
+}
+
+.timepp-menu .radiobutton StBin {
+  width: 20px;
+  height: 20px;
+  background-image: url("img/controls/radiobutton.svg") !important;
+}
+
+.timepp-menu .radiobutton:focus StBin {
+  background-image: url("img/controls/radiobutton-focused.svg") !important;
+  outline: none !important;
+}
+
+.timepp-menu .radiobutton:checked StBin {
+  background-image: url("img/controls/radiobutton-checked.svg") !important;
+}
+
+.timepp-menu .radiobutton:focus:checked StBin {
+  background-image: url("img/controls/radiobutton-checked-focused.svg") !important;
+  outline: none !important;
+}
+
+.timepp-menu .view-box-content {
+  border-image: url("img/containers/light-bg.svg") 4 !important;
+}
+
+.timepp-menu .btn-delete {
+  background-color: transparent;
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: 0 0 transparent;
+  border: none;
+  border-width: 0;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 0.96em;
+  border-image: url("img/buttons/button-primary__s.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .btn-delete StIcon {
+  width: 16px !important;
+  height: 16px !important;
+  icon-size: 16px !important;
+}
+
+.timepp-menu .btn-delete StIcon {
+  color: #fff;
+}
+
+.timepp-menu .btn-delete:hover, .timepp-menu .btn-delete:active, .timepp-menu .btn-delete:pressed, .timepp-menu .btn-delete:selected {
+  color: #ff4e6a;
+}
+
+.timepp-menu .btn-delete:hover StIcon, .timepp-menu .btn-delete:active StIcon, .timepp-menu .btn-delete:pressed StIcon, .timepp-menu .btn-delete:selected StIcon {
+  color: #ff4e6a;
+}
+
+.timepp-menu .btn-delete:hover {
+  border-image: url("img/buttons/button-primary__s--hover.svg") 10;
+}
+
+.timepp-menu .btn-delete:active, .timepp-menu .btn-delete:pressed, .timepp-menu .btn-delete:selected {
+  border-image: url("img/buttons/button-primary__s--pressed.svg") 10;
+}
+
+.timepp-menu .btn-delete:focus {
+  border-image: url("img/buttons/button-red__s.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .btn-delete:focus StIcon {
+  color: #fff;
+}
+
+.timepp-menu .btn-delete:focus:hover {
+  border-image: url("img/buttons/button-red__s--hover.svg") 10;
+}
+
+.timepp-menu .btn-delete:focus:active, .timepp-menu .btn-delete:focus:pressed, .timepp-menu .btn-delete:focus:selected {
+  border-image: url("img/buttons/button-red__s--pressed.svg") 10;
+}
+
+.timepp-menu .btn-delete:grayed, .timepp-menu .btn-delete:disabled, .timepp-menu .btn-delete:insensitive, .timepp-menu .btn-delete:focus:grayed, .timepp-menu .btn-delete:focus:disabled, .timepp-menu .btn-delete:focus:insensitive {
+  border-image: url("img/buttons/button-primary__s.svg") 10;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.timepp-menu .btn-delete:grayed StIcon, .timepp-menu .btn-delete:disabled StIcon, .timepp-menu .btn-delete:insensitive StIcon, .timepp-menu .btn-delete:focus:grayed StIcon, .timepp-menu .btn-delete:focus:disabled StIcon, .timepp-menu .btn-delete:focus:insensitive StIcon {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.timepp-menu .popup-menu-content {
+  padding: 1px !important;
+  border-image: none !important;
+}
+
+.timepp-menu .popup-menu-content > * > .timepp-separator {
+  padding: 0 !important;
+  min-height: 0 !important;
+  height: 0 !important;
+}
+
+.timepp-menu .popup-menu-content > * > .timepp-separator .popup-separator-menu-item {
+  background-image: none !important;
+  height: 0 !important;
+}
+
+.timepp-menu .section {
+  padding: .7em 1px !important;
+  border-image: url("img/containers/popup-inside-2.svg") 10 !important;
+}
+
+.timepp-menu .numpicker {
+  border-image: none !important;
+  spacing: 0 !important;
+  padding: 0 !important;
+}
+
+.timepp-menu .numpicker-counter {
+  border-image: url("img/containers/light-bg__first__horiz.svg") 10 !important;
+  padding: 0 .7em !important;
+}
+
+.timepp-menu .numpicker-arrow-box {
+  border-image: url("img/containers/light-bg__last__horiz.svg") 10 !important;
+  padding: .2em .3em !important;
+}
+
+.timepp-menu .numpicker-arrow:hover StIcon,
+.timepp-menu .numpicker-arrow:focus StIcon {
+  color: #71adf8 !important;
+}
+
+.timepp-menu .icon-box StIcon:focus,
+.timepp-menu .icon-box StIcon:hover {
+  color: #71adf8 !important;
+}
+
+.timepp-menu .icon-box StIcon:focus.close-icon:hover, .timepp-menu .icon-box StIcon:focus.close-icon:focus,
+.timepp-menu .icon-box StIcon:hover.close-icon:hover,
+.timepp-menu .icon-box StIcon:hover.close-icon:focus {
+  color: #ff4e6a !important;
+}
+
+.timepp-menu .timer-section .timer-preset-item {
+  border-image: url("img/containers/light-bg.svg") 10 !important;
+}
+
+.timepp-menu .timer-section .timer-preset-item-default-indicator-label {
+  color: #6bd7a0 !important;
+}
+
+.timepp-menu .timer-section .header .pause-icon {
+  color: #ffb34f !important;
+}
+
+.timepp-menu .timer-section .header .pause-icon:hover, .timepp-menu .timer-section .header .pause-icon:focus {
+  color: #71adf8 !important;
+}
+
+.timepp-menu .stopwatch-section .btn-reset {
+  background-color: transparent;
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: 0 0 transparent;
+  border: none;
+  border-width: 0;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 0.96em;
+  border-image: url("img/buttons/button-primary__s.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .stopwatch-section .btn-reset StIcon {
+  width: 16px !important;
+  height: 16px !important;
+  icon-size: 16px !important;
+}
+
+.timepp-menu .stopwatch-section .btn-reset StIcon {
+  color: #fff;
+}
+
+.timepp-menu .stopwatch-section .btn-reset:hover, .timepp-menu .stopwatch-section .btn-reset:active, .timepp-menu .stopwatch-section .btn-reset:pressed, .timepp-menu .stopwatch-section .btn-reset:selected {
+  color: #ff4e6a;
+}
+
+.timepp-menu .stopwatch-section .btn-reset:hover StIcon, .timepp-menu .stopwatch-section .btn-reset:active StIcon, .timepp-menu .stopwatch-section .btn-reset:pressed StIcon, .timepp-menu .stopwatch-section .btn-reset:selected StIcon {
+  color: #ff4e6a;
+}
+
+.timepp-menu .stopwatch-section .btn-reset:hover {
+  border-image: url("img/buttons/button-primary__s--hover.svg") 10;
+}
+
+.timepp-menu .stopwatch-section .btn-reset:active, .timepp-menu .stopwatch-section .btn-reset:pressed, .timepp-menu .stopwatch-section .btn-reset:selected {
+  border-image: url("img/buttons/button-primary__s--pressed.svg") 10;
+}
+
+.timepp-menu .stopwatch-section .btn-reset:focus {
+  border-image: url("img/buttons/button-red__s.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .stopwatch-section .btn-reset:focus StIcon {
+  color: #fff;
+}
+
+.timepp-menu .stopwatch-section .btn-reset:focus:hover {
+  border-image: url("img/buttons/button-red__s--hover.svg") 10;
+}
+
+.timepp-menu .stopwatch-section .btn-reset:focus:active, .timepp-menu .stopwatch-section .btn-reset:focus:pressed, .timepp-menu .stopwatch-section .btn-reset:focus:selected {
+  border-image: url("img/buttons/button-red__s--pressed.svg") 10;
+}
+
+.timepp-menu .stopwatch-section .btn-reset:grayed, .timepp-menu .stopwatch-section .btn-reset:disabled, .timepp-menu .stopwatch-section .btn-reset:insensitive, .timepp-menu .stopwatch-section .btn-reset:focus:grayed, .timepp-menu .stopwatch-section .btn-reset:focus:disabled, .timepp-menu .stopwatch-section .btn-reset:focus:insensitive {
+  border-image: url("img/buttons/button-primary__s.svg") 10;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.timepp-menu .stopwatch-section .btn-reset:grayed StIcon, .timepp-menu .stopwatch-section .btn-reset:disabled StIcon, .timepp-menu .stopwatch-section .btn-reset:insensitive StIcon, .timepp-menu .stopwatch-section .btn-reset:focus:grayed StIcon, .timepp-menu .stopwatch-section .btn-reset:focus:disabled StIcon, .timepp-menu .stopwatch-section .btn-reset:focus:insensitive StIcon {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.timepp-menu .pomo-section .settings-item:first-child {
+  color: #ff4e6a !important;
+  font-weight: bold !important;
+}
+
+.timepp-menu .alarm-section .alarm-item {
+  border-image: url("img/containers/light-bg-marked-grey.svg") 10 !important;
+  border-width: 0 !important;
+  max-width: 220px !important;
+  padding: .8em .8em .8em 1em !important;
+}
+
+.timepp-menu .alarm-section .alarm-item.active {
+  border-image: url("img/containers/light-bg-marked-blue.svg") 10 !important;
+}
+
+.timepp-menu .alarm-section .add-alarm:focus,
+.timepp-menu .alarm-section .add-alarm:hover {
+  color: #71adf8 !important;
+}
+
+.timepp-menu .alarm-section .row.days {
+  spacing: 0 !important;
+}
+
+.timepp-menu .alarm-section .day {
+  background-color: transparent;
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: 0 0 transparent;
+  border: none;
+  border-width: 0;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 0.96em;
+  border-image: url("img/buttons/button-primary__m.svg") 10;
+  color: #fff;
+  padding: 1em 0 !important;
+}
+
+.timepp-menu .alarm-section .day StIcon {
+  width: 16px !important;
+  height: 16px !important;
+  icon-size: 16px !important;
+}
+
+.timepp-menu .alarm-section .day StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:hover, .timepp-menu .alarm-section .day:active, .timepp-menu .alarm-section .day:pressed, .timepp-menu .alarm-section .day:selected {
+  color: #71adf8;
+}
+
+.timepp-menu .alarm-section .day:hover StIcon, .timepp-menu .alarm-section .day:active StIcon, .timepp-menu .alarm-section .day:pressed StIcon, .timepp-menu .alarm-section .day:selected StIcon {
+  color: #71adf8;
+}
+
+.timepp-menu .alarm-section .day:hover {
+  border-image: url("img/buttons/button-primary__m--hover.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:active, .timepp-menu .alarm-section .day:pressed, .timepp-menu .alarm-section .day:selected {
+  border-image: url("img/buttons/button-primary__m--pressed.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:focus {
+  border-image: url("img/buttons/button-primary__m.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:focus StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:focus:hover {
+  border-image: url("img/buttons/button-primary__m--hover.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:focus:active, .timepp-menu .alarm-section .day:focus:pressed, .timepp-menu .alarm-section .day:focus:selected {
+  border-image: url("img/buttons/button-primary__m--pressed.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:grayed, .timepp-menu .alarm-section .day:disabled, .timepp-menu .alarm-section .day:insensitive, .timepp-menu .alarm-section .day:focus:grayed, .timepp-menu .alarm-section .day:focus:disabled, .timepp-menu .alarm-section .day:focus:insensitive {
+  border-image: url("img/buttons/button-primary__m.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:grayed StIcon, .timepp-menu .alarm-section .day:disabled StIcon, .timepp-menu .alarm-section .day:insensitive StIcon, .timepp-menu .alarm-section .day:focus:grayed StIcon, .timepp-menu .alarm-section .day:focus:disabled StIcon, .timepp-menu .alarm-section .day:focus:insensitive StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:first-child {
+  background-color: transparent;
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: 0 0 transparent;
+  border: none;
+  border-width: 0;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 0.96em;
+  border-image: url("img/buttons/button-primary__f.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:first-child StIcon {
+  width: 16px !important;
+  height: 16px !important;
+  icon-size: 16px !important;
+}
+
+.timepp-menu .alarm-section .day:first-child StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:first-child:hover, .timepp-menu .alarm-section .day:first-child:active, .timepp-menu .alarm-section .day:first-child:pressed, .timepp-menu .alarm-section .day:first-child:selected {
+  color: #71adf8;
+}
+
+.timepp-menu .alarm-section .day:first-child:hover StIcon, .timepp-menu .alarm-section .day:first-child:active StIcon, .timepp-menu .alarm-section .day:first-child:pressed StIcon, .timepp-menu .alarm-section .day:first-child:selected StIcon {
+  color: #71adf8;
+}
+
+.timepp-menu .alarm-section .day:first-child:hover {
+  border-image: url("img/buttons/button-primary__f--hover.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:first-child:active, .timepp-menu .alarm-section .day:first-child:pressed, .timepp-menu .alarm-section .day:first-child:selected {
+  border-image: url("img/buttons/button-primary__f--pressed.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:first-child:focus {
+  border-image: url("img/buttons/button-primary__f.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:first-child:focus StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:first-child:focus:hover {
+  border-image: url("img/buttons/button-primary__f--hover.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:first-child:focus:active, .timepp-menu .alarm-section .day:first-child:focus:pressed, .timepp-menu .alarm-section .day:first-child:focus:selected {
+  border-image: url("img/buttons/button-primary__f--pressed.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:first-child:grayed, .timepp-menu .alarm-section .day:first-child:disabled, .timepp-menu .alarm-section .day:first-child:insensitive, .timepp-menu .alarm-section .day:first-child:focus:grayed, .timepp-menu .alarm-section .day:first-child:focus:disabled, .timepp-menu .alarm-section .day:first-child:focus:insensitive {
+  border-image: url("img/buttons/button-primary__f.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:first-child:grayed StIcon, .timepp-menu .alarm-section .day:first-child:disabled StIcon, .timepp-menu .alarm-section .day:first-child:insensitive StIcon, .timepp-menu .alarm-section .day:first-child:focus:grayed StIcon, .timepp-menu .alarm-section .day:first-child:focus:disabled StIcon, .timepp-menu .alarm-section .day:first-child:focus:insensitive StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child {
+  background-color: transparent;
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: 0 0 transparent;
+  border: none;
+  border-width: 0;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 0.96em;
+  border-image: url("img/buttons/button-primary__l.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child StIcon {
+  width: 16px !important;
+  height: 16px !important;
+  icon-size: 16px !important;
+}
+
+.timepp-menu .alarm-section .day:last-child StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child:hover, .timepp-menu .alarm-section .day:last-child:active, .timepp-menu .alarm-section .day:last-child:pressed, .timepp-menu .alarm-section .day:last-child:selected {
+  color: #71adf8;
+}
+
+.timepp-menu .alarm-section .day:last-child:hover StIcon, .timepp-menu .alarm-section .day:last-child:active StIcon, .timepp-menu .alarm-section .day:last-child:pressed StIcon, .timepp-menu .alarm-section .day:last-child:selected StIcon {
+  color: #71adf8;
+}
+
+.timepp-menu .alarm-section .day:last-child:hover {
+  border-image: url("img/buttons/button-primary__l--hover.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:last-child:active, .timepp-menu .alarm-section .day:last-child:pressed, .timepp-menu .alarm-section .day:last-child:selected {
+  border-image: url("img/buttons/button-primary__l--pressed.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:last-child:focus {
+  border-image: url("img/buttons/button-primary__l.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child:focus StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child:focus:hover {
+  border-image: url("img/buttons/button-primary__l--hover.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:last-child:focus:active, .timepp-menu .alarm-section .day:last-child:focus:pressed, .timepp-menu .alarm-section .day:last-child:focus:selected {
+  border-image: url("img/buttons/button-primary__l--pressed.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:last-child:grayed, .timepp-menu .alarm-section .day:last-child:disabled, .timepp-menu .alarm-section .day:last-child:insensitive, .timepp-menu .alarm-section .day:last-child:focus:grayed, .timepp-menu .alarm-section .day:last-child:focus:disabled, .timepp-menu .alarm-section .day:last-child:focus:insensitive {
+  border-image: url("img/buttons/button-primary__l.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child:grayed StIcon, .timepp-menu .alarm-section .day:last-child:disabled StIcon, .timepp-menu .alarm-section .day:last-child:insensitive StIcon, .timepp-menu .alarm-section .day:last-child:focus:grayed StIcon, .timepp-menu .alarm-section .day:last-child:focus:disabled StIcon, .timepp-menu .alarm-section .day:last-child:focus:insensitive StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child {
+  background-color: transparent;
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  box-shadow: 0 0 transparent;
+  border: none;
+  border-width: 0;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 0.96em;
+  border-image: url("img/buttons/button-primary__s.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child StIcon {
+  width: 16px !important;
+  height: 16px !important;
+  icon-size: 16px !important;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:hover, .timepp-menu .alarm-section .day:last-child:first-child:active, .timepp-menu .alarm-section .day:last-child:first-child:pressed, .timepp-menu .alarm-section .day:last-child:first-child:selected {
+  color: #71adf8;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:hover StIcon, .timepp-menu .alarm-section .day:last-child:first-child:active StIcon, .timepp-menu .alarm-section .day:last-child:first-child:pressed StIcon, .timepp-menu .alarm-section .day:last-child:first-child:selected StIcon {
+  color: #71adf8;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:hover {
+  border-image: url("img/buttons/button-primary__s--hover.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:active, .timepp-menu .alarm-section .day:last-child:first-child:pressed, .timepp-menu .alarm-section .day:last-child:first-child:selected {
+  border-image: url("img/buttons/button-primary__s--pressed.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:focus {
+  border-image: url("img/buttons/button-primary__s.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:focus StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:focus:hover {
+  border-image: url("img/buttons/button-primary__s--hover.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:focus:active, .timepp-menu .alarm-section .day:last-child:first-child:focus:pressed, .timepp-menu .alarm-section .day:last-child:first-child:focus:selected {
+  border-image: url("img/buttons/button-primary__s--pressed.svg") 10;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:grayed, .timepp-menu .alarm-section .day:last-child:first-child:disabled, .timepp-menu .alarm-section .day:last-child:first-child:insensitive, .timepp-menu .alarm-section .day:last-child:first-child:focus:grayed, .timepp-menu .alarm-section .day:last-child:first-child:focus:disabled, .timepp-menu .alarm-section .day:last-child:first-child:focus:insensitive {
+  border-image: url("img/buttons/button-primary__s.svg") 10;
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:grayed StIcon, .timepp-menu .alarm-section .day:last-child:first-child:disabled StIcon, .timepp-menu .alarm-section .day:last-child:first-child:insensitive StIcon, .timepp-menu .alarm-section .day:last-child:first-child:focus:grayed StIcon, .timepp-menu .alarm-section .day:last-child:first-child:focus:disabled StIcon, .timepp-menu .alarm-section .day:last-child:first-child:focus:insensitive StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:focus {
+  outline: 0 !important;
+}
+
+.timepp-menu .todo-section {
+  padding: 0 !important;
+  border-image: none !important;
+}
+
+.timepp-menu .todo-section .view-box {
+  padding: .8em !important;
+  border-image: url("img/containers/popup-inside.svg") 10 !important;
+}
+
+.timepp-menu .todo-section .view-default {
+  padding: 0 !important;
+  border-image: none !important;
+}
+
+.timepp-menu .todo-section .view-default .view-box-content {
+  spacing: 0 !important;
+  border-image: none !important;
+}
+
+.timepp-menu .todo-section .view-default .kanban-column {
+  padding: .8em 0 !important;
+  border-image: url("img/containers/popup-inside-2.svg") 10 !important;
+}
+
+.timepp-menu .todo-section .view-default .kanban-column.collapsed {
+  padding: 0 1em !important;
+}
+
+.timepp-menu .todo-section .view-default .kanban-column.collapsed StIcon:focus, .timepp-menu .todo-section .view-default .kanban-column.collapsed StIcon:hover {
+  color: #71adf8 !important;
+}
+
+.timepp-menu .todo-section .view-default .kanban-column.collapsed StIcon:focus.close-icon:hover, .timepp-menu .todo-section .view-default .kanban-column.collapsed StIcon:focus.close-icon:focus, .timepp-menu .todo-section .view-default .kanban-column.collapsed StIcon:hover.close-icon:hover, .timepp-menu .todo-section .view-default .kanban-column.collapsed StIcon:hover.close-icon:focus {
+  color: #ff4e6a !important;
+}
+
+.timepp-menu .todo-section .kanban-switcher-item,
+.timepp-menu .todo-section .file-switcher-item {
+  border-image: url("img/containers/light-bg.svg") 10 !important;
+}
+
+.timepp-menu .todo-section .kanban-switcher-item-check-icon.active,
+.timepp-menu .todo-section .file-switcher-item-check-icon.active {
+  color: #6bd7a0 !important;
+}
+
+.timepp-menu .todo-section .delete-complete-tasks-label,
+.timepp-menu .todo-section .no-todo-file-msg {
+  color: #ff4e6a !important;
+}
+
+.timepp-menu .todo-section .loading-msg {
+  color: #b48cff !important;
+}
+
+.timepp-menu .todo-section .due-date-label {
+  color: #ff4e6a !important;
+}
+
+.timepp-menu .todo-section .pin-icon.active,
+.timepp-menu .todo-section .tracker-pause-icon,
+.timepp-menu .todo-section .filter-icon.active {
+  color: #ffb34f !important;
+}
+
+.timepp-menu .todo-section .link:focus StLabel,
+.timepp-menu .todo-section .link:hover StLabel {
+  color: #71adf8 !important;
+}
+
+.timepp-menu .todo-section .add-task:focus,
+.timepp-menu .todo-section .add-task:hover {
+  color: #71adf8 !important;
+}
+
+.timepp-menu .todo-section .task-item {
+  padding: 8px !important;
+  border-image: url("img/containers/light-bg-marked-grey.svg") 10 !important;
+}
+
+.timepp-menu .todo-section .task-item.completed {
+  border-image: url("img/containers/light-bg.svg") 10 !important;
+}
+
+.timepp-menu .todo-section .task-item.A {
+  border-image: url("img/containers/light-bg-marked-red.svg") 10 !important;
+}
+
+.timepp-menu .todo-section .task-item.A .priority-label {
+  color: #ff4e6a !important;
+}
+
+.timepp-menu .todo-section .task-item.B {
+  border-image: url("img/containers/light-bg-marked-yellow.svg") 10 !important;
+}
+
+.timepp-menu .todo-section .task-item.B .priority-label {
+  color: #ffb34f !important;
+}
+
+.timepp-menu .todo-section .task-item.C {
+  border-image: url("img/containers/light-bg-marked-violet.svg") 10 !important;
+}
+
+.timepp-menu .todo-section .task-item.C .priority-label {
+  color: #b48cff !important;
+}
+
+.timepp-menu .todo-section .task-item.D {
+  border-image: url("img/containers/light-bg-marked-green.svg") 10 !important;
+}
+
+.timepp-menu .todo-section .task-item.D .priority-label {
+  color: #6bd7a0 !important;
+}
+
+.timepp-menu .todo-section .task-item.hidden-task {
+  border-image: url("img/containers/dark-bg.svg") 10 !important;
+}
